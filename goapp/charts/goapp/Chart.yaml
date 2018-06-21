@@ -1,0 +1,4 @@
+apiVersion: v1
+description: A Helm chart to deploy the lighthouse application
+name: goapp
+version: v0.1.0

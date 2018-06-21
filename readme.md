@@ -21,6 +21,10 @@ cd nodeapp
 draft create
 draft up
 cd ..
+cd goapp
+draft create
+draft up
+cd ..
 ```
 
 ## all done? 
@@ -42,13 +46,23 @@ nodeapp-javascript   ClusterIP   10.0.43.125    <none>        8080/TCP   1m
 
 ## allow inbound access 
 
-open the `nodeapp\charts\values.yaml` file and the `dotnetapp\charts\values.yaml` file. note the `service` property in each of these:
+change `dotnetapp\charts\values.yaml` to look like this:
 
 ```yaml
 service:
-  name: node
-  type: ClusterIP
-  externalPort: 8080
+  name: dotnetcore
+  type: LoadBalancer
+  externalPort: 80
+  internalPort: 80
+```
+
+change `goapp\charts\values.yaml` to look like this:
+
+```yaml
+service:
+  name: golang
+  type: LoadBalancer
+  externalPort: 80
   internalPort: 8080
 ```
 
@@ -62,16 +76,6 @@ service:
   internalPort: 3000
 ```
 
-change `dotnetapp\charts\values.yaml` to look like this:
-
-```yaml
-service:
-  name: dotnetcore
-  type: LoadBalancer
-  externalPort: 80
-  internalPort: 80
-```
-
 once you do this, the dotnet app should respond on port 5000, and the Node.js app on 5001. to deploy the changes, run these commands:
 
 ```bash
@@ -81,12 +85,11 @@ cd ..
 cd nodeapp
 draft up
 cd ..
+cd goapp
+draft up
+cd ..
 kubectl get svc
 ```
-
-when the command executes you'll see a table of all the ip addresses for each of the sites:
-
- 
 
 ## issues? 
 

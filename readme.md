@@ -58,7 +58,7 @@ change `nodeapp\charts\values.yaml` to look like this:
 service:
   name: node
   type: LoadBalancer
-  externalPort: 5001
+  externalPort: 80
   internalPort: 3000
 ```
 
@@ -68,7 +68,7 @@ change `dotnetapp\charts\values.yaml` to look like this:
 service:
   name: dotnetcore
   type: LoadBalancer
-  externalPort: 5000
+  externalPort: 80
   internalPort: 80
 ```
 

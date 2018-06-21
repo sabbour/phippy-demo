@@ -2,7 +2,7 @@ replicaCount: 1
 image:
   pullPolicy: Always
 service:
-  internalPort: 3000
+  internalPort: 80
   externalPort: 80
 ingress:
   enabled: false

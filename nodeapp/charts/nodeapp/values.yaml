@@ -5,5 +5,5 @@ service:
   internalPort: 3000
   externalPort: 80
 ingress:
-  enabled: false
-  basedomain: 9e626ede-8145-4169-a5ab-05500238a78f.westeurope.aksapp.io # replace with your own from the portal
+  enabled: true
+  basedomain: cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io # replace with your own from the portal

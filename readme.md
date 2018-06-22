@@ -51,22 +51,37 @@ nodeapp-nodeapp       ClusterIP      10.0.236.198   <none>          80/TCP      
 
 ## allow inbound access 
 
-retrieve your cluster DNS zone hostname.
+the cluster has a default inbound DNS address. to get it, execute the `az` CLI command:
 
-update `dotnetapp\charts\values.yaml` to look like this:
-
-```yaml
-ingress:
-  enabled: true
-  basedomain: <your cluster specific dns zone>
+```bash
+az aks show -n <your aks cluster> -g <your resource group>
 ```
 
-change `nodeapp\charts\values.yaml` to look like this:
+find the `httpApplicationRouting` segment of the JSON payload and copy the `HTTPApplicationRoutingZoneName` value:
+
+```json
+"httpApplicationRouting": {
+  "config": {
+    "HTTPApplicationRoutingZoneName": "cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io"
+  },
+  "enabled": true
+}
+```
+
+paste in the DNS to `dotnetapp\charts\values.yaml` so that it looks like this, replacing the example value with your own:
 
 ```yaml
 ingress:
   enabled: true
-  basedomain: <your cluster specific dns zone>
+  basedomain: cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io
+```
+
+paste in the DNS to `nodeapp\charts\values.yaml` so that it looks like this, replacing the example value with your own:
+
+```yaml
+ingress:
+  enabled: true
+  basedomain: cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io
 ```
 
 once you do this, the dotnet app should respond on `dotnetapp.<your clusters specific dns zone>`, and the Node.js app on `nodeapp.<your clusters specific dns zone>`. for example: `dotnetapp.9e626ede-8145-4169-a5ab-05500238a78f.westeurope.aksapp.io`

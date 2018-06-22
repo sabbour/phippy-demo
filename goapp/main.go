@@ -47,10 +47,13 @@ func main() {
 					fmt.Printf("couldn't cast object as pod: %s \n", obj)
 					return
 				}
-                fmt.Printf("pod added: %s \n", pod.ObjectMeta.Name)
-                fmt.Printf("\tnamespace: %s \n", pod.ObjectMeta.Namespace)
-                fmt.Printf("\tlabels: %s \n", pod.ObjectMeta.Labels)
-                fmt.Printf("\tstatus: %s \n", pod.Status.Phase)
+				if pod.ObjectMeta.Namespace != "kube-system" {
+					fmt.Printf("pod added: %s \n", pod.ObjectMeta.Name)
+					fmt.Printf("\tnamespace: %s \n", pod.ObjectMeta.Namespace)
+					fmt.Printf("\tlabels: %s \n", pod.ObjectMeta.Labels)
+					fmt.Printf("\tstatus: %s \n", pod.Status.Phase)
+					fmt.Printf("\tpod verbose look: %s \n", pod.ObjectMeta)
+				}
 			},
 			// called when an object is modified. Note that oldObj is the
     		// last known state of the object-- it is possible that several changes
@@ -71,10 +74,14 @@ func main() {
 					fmt.Printf("couldn't cast object as pod: %s \n", newObj)
 					return
 				}
-				fmt.Printf("pod changed: %s \n", newPod.ObjectMeta.Name)
-                fmt.Printf("\tnamespace: %s \n", newPod.ObjectMeta.Namespace)
-                fmt.Printf("\tlabels: %s \n", newPod.ObjectMeta.Labels)
-                fmt.Printf("\tstatus: %s \n", newPod.Status.Phase)
+
+				if newPod.ObjectMeta.Namespace != "kube-system" {
+					fmt.Printf("pod changed: %s \n", newPod.ObjectMeta.Name)
+					fmt.Printf("\tnamespace: %s \n", newPod.ObjectMeta.Namespace)
+					fmt.Printf("\tlabels: %s \n", newPod.ObjectMeta.Labels)
+					fmt.Printf("\tstatus: %s \n", newPod.Status.Phase)
+					fmt.Printf("\tpod verbose look: %s \n", newPod.ObjectMeta)
+				}
 			},
 			// will get the final state of the item if it is known, otherwise
 			// it will get an object of type DeletedFinalStateUnknown. This can
@@ -87,10 +94,14 @@ func main() {
 					fmt.Printf("couldn't cast object as pod: %s \n", obj)
 					return
 				}
-				fmt.Printf("pod deleted: %s \n", pod.ObjectMeta.Name)
-                fmt.Printf("\tnamespace: %s \n", pod.ObjectMeta.Namespace)
-                fmt.Printf("\tlabels: %s \n", pod.ObjectMeta.Labels)
-                fmt.Printf("\tstatus: %s \n", pod.Status.Phase)
+
+				if pod.ObjectMeta.Namespace != "kube-system" {
+					fmt.Printf("pod deleted: %s \n", pod.ObjectMeta.Name)
+					fmt.Printf("\tnamespace: %s \n", pod.ObjectMeta.Namespace)
+					fmt.Printf("\tlabels: %s \n", pod.ObjectMeta.Labels)
+					fmt.Printf("\tstatus: %s \n", pod.Status.Phase)
+					fmt.Printf("\tpod verbose look: %s \n", pod.ObjectMeta)
+				}
             },
          },
 	 )

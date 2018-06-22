@@ -21,7 +21,7 @@ to get started, do this:
 ```bash
 git clone https://github.com/bradygmsft/phippy-demo.git
 cd phippy-demo
-cd dotnetapp
+cd parrot
 draft up
 cd ..
 cd nodeapp
@@ -44,7 +44,7 @@ you should see something like this, if you had a clean cluster prior to the depl
 
 ```sh
 NAME                  TYPE           CLUSTER-IP     EXTERNAL-IP     PORT(S)     AGE
-dotnetapp-dotnetapp   ClusterIP      10.0.89.91     <none>          80/TCP      1m
+parrot-parrot         ClusterIP      10.0.89.91     <none>          80/TCP      1m
 kubernetes            ClusterIP      10.0.0.1       <none>          443/TCP     2d
 nodeapp-nodeapp       ClusterIP      10.0.236.198   <none>          80/TCP      2m
 ```
@@ -68,7 +68,7 @@ find the `httpApplicationRouting` segment of the JSON payload and copy the `HTTP
 }
 ```
 
-paste in the DNS to `dotnetapp\charts\values.yaml` so that it looks like this, replacing the example value with your own:
+paste in the DNS to `parrot\charts\values.yaml` so that it looks like this, replacing the example value with your own:
 
 ```yaml
 ingress:
@@ -84,12 +84,12 @@ ingress:
   basedomain: cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io
 ```
 
-once you do this, the dotnet app should respond on `dotnetapp.<your clusters specific dns zone>`, and the Node.js app on `nodeapp.<your clusters specific dns zone>`. for example: `dotnetapp.9e626ede-8145-4169-a5ab-05500238a78f.westeurope.aksapp.io`
+once you do this, the dotnet app should respond on `parrot.<your clusters specific dns zone>`, and the Node.js app on `nodeapp.<your clusters specific dns zone>`. for example: `parrot.9e626ede-8145-4169-a5ab-05500238a78f.westeurope.aksapp.io`
 
 to deploy the changes, run these commands:
 
 ```bash
-cd dotnetapp
+cd parrot
 draft up
 cd ..
 cd nodeapp
@@ -106,7 +106,7 @@ you should see something like this, if you had a clean cluster prior to the depl
 
 ```sh
 NAME                  HOSTS                                                                 ADDRESS          PORTS     AGE
-dotnetapp-dotnetapp   dotnetapp.9e626ede-8145-4169-a5ab-05500238a78f.westeurope.aksapp.io   52.136.252.253   80        1m
+parrot-parrot         parrot.9e626ede-8145-4169-a5ab-05500238a78f.westeurope.aksapp.io   52.136.252.253   80        1m
 nodeapp-nodeapp       nodeapp.9e626ede-8145-4169-a5ab-05500238a78f.westeurope.aksapp.io     52.136.252.253   80        2m
 ```
 

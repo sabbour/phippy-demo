@@ -1,0 +1,4 @@
+apiVersion: v1
+description: The parrot tells the client what the other components are doing in each namespace. 
+name: parrot
+version: v0.1.0

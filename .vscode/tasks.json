@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/dotnetapp/dotnetapp.csproj"
+                "${workspaceFolder}/parrot/parrot.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

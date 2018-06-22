@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/dotnetapp/bin/Debug/netcoreapp2.0/dotnetapp.dll",
+            "program": "${workspaceFolder}/parrot/bin/Debug/netcoreapp2.0/parrot.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/dotnetapp",
+            "cwd": "${workspaceFolder}/parrot",
             "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart",
             "launchBrowser": {

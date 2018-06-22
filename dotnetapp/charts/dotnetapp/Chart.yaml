@@ -1,4 +1,0 @@
-apiVersion: v1
-description: A Helm chart to deploy the dotnet application
-name: dotnetapp
-version: v0.1.0

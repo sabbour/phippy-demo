@@ -52,7 +52,6 @@ func main() {
 					fmt.Printf("\tnamespace: %s \n", pod.ObjectMeta.Namespace)
 					fmt.Printf("\tlabels: %s \n", pod.ObjectMeta.Labels)
 					fmt.Printf("\tstatus: %s \n", pod.Status.Phase)
-					fmt.Printf("\tpod verbose look: %s \n", pod.ObjectMeta)
 				}
 			},
 			// called when an object is modified. Note that oldObj is the
@@ -80,7 +79,6 @@ func main() {
 					fmt.Printf("\tnamespace: %s \n", newPod.ObjectMeta.Namespace)
 					fmt.Printf("\tlabels: %s \n", newPod.ObjectMeta.Labels)
 					fmt.Printf("\tstatus: %s \n", newPod.Status.Phase)
-					fmt.Printf("\tpod verbose look: %s \n", newPod.ObjectMeta)
 				}
 			},
 			// will get the final state of the item if it is known, otherwise
@@ -100,7 +98,6 @@ func main() {
 					fmt.Printf("\tnamespace: %s \n", pod.ObjectMeta.Namespace)
 					fmt.Printf("\tlabels: %s \n", pod.ObjectMeta.Labels)
 					fmt.Printf("\tstatus: %s \n", pod.Status.Phase)
-					fmt.Printf("\tpod verbose look: %s \n", pod.ObjectMeta)
 				}
             },
          },

@@ -1,6 +1,6 @@
 [environments]
   [environments.development]
-    name = "goapp"
+    name = "captainkube"
     namespace = "default"
     wait = true
     watch = false

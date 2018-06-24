@@ -1,0 +1,3172 @@
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[0]
+      User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[58]
+      Creating key {60a3ae5e-dc09-496d-874e-0e19f77ecc39} with creation date 2018-06-24 19:19:37Z, activation date 2018-06-24 19:19:37Z, and expiration date 2018-09-22 19:19:37Z.
+[40m[1m[33mwarn[39m[22m[49m: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {60a3ae5e-dc09-496d-874e-0e19f77ecc39} may be persisted to storage in unencrypted form.
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository[39]
+      Writing data to file '/root/.aspnet/DataProtection-Keys/key-60a3ae5e-dc09-496d-874e-0e19f77ecc39.xml'.
+Hosting environment: Development
+Content root path: /app
+Now listening on: http://[::]:80
+Application started. Press Ctrl+C to shut down.
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 562
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 562
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "name": "parrot-parrot-549c7c7f4d-2jdqp",
+        "generateName": "parrot-parrot-549c7c7f4d-",
+        "namespace": "default",
+        "selfLink": "/api/v1/namespaces/default/pods/parrot-parrot-549c7c7f4d-2jdqp",
+        "uid": "86d15876-77e3-11e8-bdbc-b20c0e5c020c",
+        "resourceVersion": "708613",
+        "creationTimestamp": "2018-06-24T19:19:33Z",
+        "labels": {
+          "app": "parrot-parrot",
+          "pod-template-hash": "1057373908"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "ReplicaSet",
+            "name": "parrot-parrot-549c7c7f4d",
+            "uid": "86c694fe-77e3-11e8-bdbc-b20c0e5c020c",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ]
+      }) - ModelState is Valid
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "name": "parrot-parrot-549c7c7f4d-2jdqp",
+        "generateName": "parrot-parrot-549c7c7f4d-",
+        "namespace": "default",
+        "selfLink": "/api/v1/namespaces/default/pods/parrot-parrot-549c7c7f4d-2jdqp",
+        "uid": "86d15876-77e3-11e8-bdbc-b20c0e5c020c",
+        "resourceVersion": "708613",
+        "creationTimestamp": "2018-06-24T19:19:33Z",
+        "labels": {
+          "app": "parrot-parrot",
+          "pod-template-hash": "1057373908"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "ReplicaSet",
+            "name": "parrot-parrot-549c7c7f4d",
+            "uid": "86c694fe-77e3-11e8-bdbc-b20c0e5c020c",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ]
+      }) - ModelState is Valid
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 298.5362ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 298.5362ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 482.4999ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 482.4999ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 562
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "name": "parrot-parrot-549c7c7f4d-2jdqp",
+        "generateName": "parrot-parrot-549c7c7f4d-",
+        "namespace": "default",
+        "selfLink": "/api/v1/namespaces/default/pods/parrot-parrot-549c7c7f4d-2jdqp",
+        "uid": "86d15876-77e3-11e8-bdbc-b20c0e5c020c",
+        "resourceVersion": "708625",
+        "creationTimestamp": "2018-06-24T19:19:33Z",
+        "labels": {
+          "app": "parrot-parrot",
+          "pod-template-hash": "1057373908"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "ReplicaSet",
+            "name": "parrot-parrot-549c7c7f4d",
+            "uid": "86c694fe-77e3-11e8-bdbc-b20c0e5c020c",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ]
+      }) - ModelState is Valid
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 562
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "name": "parrot-parrot-549c7c7f4d-2jdqp",
+        "generateName": "parrot-parrot-549c7c7f4d-",
+        "namespace": "default",
+        "selfLink": "/api/v1/namespaces/default/pods/parrot-parrot-549c7c7f4d-2jdqp",
+        "uid": "86d15876-77e3-11e8-bdbc-b20c0e5c020c",
+        "resourceVersion": "708625",
+        "creationTimestamp": "2018-06-24T19:19:33Z",
+        "labels": {
+          "app": "parrot-parrot",
+          "pod-template-hash": "1057373908"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "ReplicaSet",
+            "name": "parrot-parrot-549c7c7f4d",
+            "uid": "86c694fe-77e3-11e8-bdbc-b20c0e5c020c",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ]
+      }) - ModelState is Valid
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 1.3822ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 1.3822ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 3.3192ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 3.3192ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 637
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 637
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "name": "parrot-parrot-86ddc548c6-q25zp",
+        "generateName": "parrot-parrot-86ddc548c6-",
+        "namespace": "default",
+        "selfLink": "/api/v1/namespaces/default/pods/parrot-parrot-86ddc548c6-q25zp",
+        "uid": "28f1d506-77e3-11e8-bdbc-b20c0e5c020c",
+        "resourceVersion": "708631",
+        "creationTimestamp": "2018-06-24T19:16:56Z",
+        "deletionTimestamp": "2018-06-24T19:20:07Z",
+        "deletionGracePeriodSeconds": 30,
+        "labels": {
+          "app": "parrot-parrot",
+          "pod-template-hash": "4288710472"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "ReplicaSet",
+            "name": "parrot-parrot-86ddc548c6",
+            "uid": "28ef2a56-77e3-11e8-bdbc-b20c0e5c020c",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ]
+      }) - ModelState is Valid
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "name": "parrot-parrot-86ddc548c6-q25zp",
+        "generateName": "parrot-parrot-86ddc548c6-",
+        "namespace": "default",
+        "selfLink": "/api/v1/namespaces/default/pods/parrot-parrot-86ddc548c6-q25zp",
+        "uid": "28f1d506-77e3-11e8-bdbc-b20c0e5c020c",
+        "resourceVersion": "708631",
+        "creationTimestamp": "2018-06-24T19:16:56Z",
+        "deletionTimestamp": "2018-06-24T19:20:07Z",
+        "deletionGracePeriodSeconds": 30,
+        "labels": {
+          "app": "parrot-parrot",
+          "pod-template-hash": "4288710472"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "ReplicaSet",
+            "name": "parrot-parrot-86ddc548c6",
+            "uid": "28ef2a56-77e3-11e8-bdbc-b20c0e5c020c",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ]
+      }) - ModelState is Valid
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 26.9355ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 26.9355ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 27.4836ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 27.4836ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 637
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 637
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "name": "parrot-parrot-86ddc548c6-q25zp",
+        "generateName": "parrot-parrot-86ddc548c6-",
+        "namespace": "default",
+        "selfLink": "/api/v1/namespaces/default/pods/parrot-parrot-86ddc548c6-q25zp",
+        "uid": "28f1d506-77e3-11e8-bdbc-b20c0e5c020c",
+        "resourceVersion": "708642",
+        "creationTimestamp": "2018-06-24T19:16:56Z",
+        "deletionTimestamp": "2018-06-24T19:20:07Z",
+        "deletionGracePeriodSeconds": 30,
+        "labels": {
+          "app": "parrot-parrot",
+          "pod-template-hash": "4288710472"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "ReplicaSet",
+            "name": "parrot-parrot-86ddc548c6",
+            "uid": "28ef2a56-77e3-11e8-bdbc-b20c0e5c020c",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ]
+      }) - ModelState is Valid
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "name": "parrot-parrot-86ddc548c6-q25zp",
+        "generateName": "parrot-parrot-86ddc548c6-",
+        "namespace": "default",
+        "selfLink": "/api/v1/namespaces/default/pods/parrot-parrot-86ddc548c6-q25zp",
+        "uid": "28f1d506-77e3-11e8-bdbc-b20c0e5c020c",
+        "resourceVersion": "708642",
+        "creationTimestamp": "2018-06-24T19:16:56Z",
+        "deletionTimestamp": "2018-06-24T19:20:07Z",
+        "deletionGracePeriodSeconds": 30,
+        "labels": {
+          "app": "parrot-parrot",
+          "pod-template-hash": "4288710472"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "ReplicaSet",
+            "name": "parrot-parrot-86ddc548c6",
+            "uid": "28ef2a56-77e3-11e8-bdbc-b20c0e5c020c",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ]
+      }) - ModelState is Valid
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 0.5369ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 0.5369ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 0.8356ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 0.8356ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 16
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "name": "value"
+      }) - ModelState is Valid
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 0.6167ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 0.8422ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 16
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "name": "value"
+      }) - ModelState is Valid
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 0.6167ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 0.8422ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 636
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 636
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "name": "parrot-parrot-86ddc548c6-q25zp",
+        "generateName": "parrot-parrot-86ddc548c6-",
+        "namespace": "default",
+        "selfLink": "/api/v1/namespaces/default/pods/parrot-parrot-86ddc548c6-q25zp",
+        "uid": "28f1d506-77e3-11e8-bdbc-b20c0e5c020c",
+        "resourceVersion": "708647",
+        "creationTimestamp": "2018-06-24T19:16:56Z",
+        "deletionTimestamp": "2018-06-24T19:19:37Z",
+        "deletionGracePeriodSeconds": 0,
+        "labels": {
+          "app": "parrot-parrot",
+          "pod-template-hash": "4288710472"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "ReplicaSet",
+            "name": "parrot-parrot-86ddc548c6",
+            "uid": "28ef2a56-77e3-11e8-bdbc-b20c0e5c020c",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ]
+      }) - ModelState is Valid
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "name": "parrot-parrot-86ddc548c6-q25zp",
+        "generateName": "parrot-parrot-86ddc548c6-",
+        "namespace": "default",
+        "selfLink": "/api/v1/namespaces/default/pods/parrot-parrot-86ddc548c6-q25zp",
+        "uid": "28f1d506-77e3-11e8-bdbc-b20c0e5c020c",
+        "resourceVersion": "708647",
+        "creationTimestamp": "2018-06-24T19:16:56Z",
+        "deletionTimestamp": "2018-06-24T19:19:37Z",
+        "deletionGracePeriodSeconds": 0,
+        "labels": {
+          "app": "parrot-parrot",
+          "pod-template-hash": "4288710472"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "ReplicaSet",
+            "name": "parrot-parrot-86ddc548c6",
+            "uid": "28ef2a56-77e3-11e8-bdbc-b20c0e5c020c",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ]
+      }) - ModelState is Valid
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 1.8344ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 1.8344ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 3.4886ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 3.4886ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 562
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 562
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "name": "parrot-parrot-549c7c7f4d-2jdqp",
+        "generateName": "parrot-parrot-549c7c7f4d-",
+        "namespace": "default",
+        "selfLink": "/api/v1/namespaces/default/pods/parrot-parrot-549c7c7f4d-2jdqp",
+        "uid": "86d15876-77e3-11e8-bdbc-b20c0e5c020c",
+        "resourceVersion": "708625",
+        "creationTimestamp": "2018-06-24T19:19:33Z",
+        "labels": {
+          "app": "parrot-parrot",
+          "pod-template-hash": "1057373908"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "ReplicaSet",
+            "name": "parrot-parrot-549c7c7f4d",
+            "uid": "86c694fe-77e3-11e8-bdbc-b20c0e5c020c",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ]
+      }) - ModelState is Valid
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "name": "parrot-parrot-549c7c7f4d-2jdqp",
+        "generateName": "parrot-parrot-549c7c7f4d-",
+        "namespace": "default",
+        "selfLink": "/api/v1/namespaces/default/pods/parrot-parrot-549c7c7f4d-2jdqp",
+        "uid": "86d15876-77e3-11e8-bdbc-b20c0e5c020c",
+        "resourceVersion": "708625",
+        "creationTimestamp": "2018-06-24T19:19:33Z",
+        "labels": {
+          "app": "parrot-parrot",
+          "pod-template-hash": "1057373908"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "ReplicaSet",
+            "name": "parrot-parrot-549c7c7f4d",
+            "uid": "86c694fe-77e3-11e8-bdbc-b20c0e5c020c",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ]
+      }) - ModelState is Valid
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 1.4622ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 1.4622ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 3.2001ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 3.2001ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 552
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 552
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "name": "goapp-goapp-855c67b5b6-k25cj",
+        "generateName": "goapp-goapp-855c67b5b6-",
+        "namespace": "default",
+        "selfLink": "/api/v1/namespaces/default/pods/goapp-goapp-855c67b5b6-k25cj",
+        "uid": "f20dead4-77de-11e8-bdbc-b20c0e5c020c",
+        "resourceVersion": "705953",
+        "creationTimestamp": "2018-06-24T18:46:46Z",
+        "labels": {
+          "app": "goapp-goapp",
+          "pod-template-hash": "4117236162"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "ReplicaSet",
+            "name": "goapp-goapp-855c67b5b6",
+            "uid": "f209c5a5-77de-11e8-bdbc-b20c0e5c020c",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ]
+      }) - ModelState is Valid
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "name": "goapp-goapp-855c67b5b6-k25cj",
+        "generateName": "goapp-goapp-855c67b5b6-",
+        "namespace": "default",
+        "selfLink": "/api/v1/namespaces/default/pods/goapp-goapp-855c67b5b6-k25cj",
+        "uid": "f20dead4-77de-11e8-bdbc-b20c0e5c020c",
+        "resourceVersion": "705953",
+        "creationTimestamp": "2018-06-24T18:46:46Z",
+        "labels": {
+          "app": "goapp-goapp",
+          "pod-template-hash": "4117236162"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "ReplicaSet",
+            "name": "goapp-goapp-855c67b5b6",
+            "uid": "f209c5a5-77de-11e8-bdbc-b20c0e5c020c",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ]
+      }) - ModelState is Valid
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 1.3446ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 1.3446ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 2.0245ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 2.0245ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 572
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "name": "nodeapp-nodeapp-66845c9868-phvqv",
+        "generateName": "nodeapp-nodeapp-66845c9868-",
+        "namespace": "default",
+        "selfLink": "/api/v1/namespaces/default/pods/nodeapp-nodeapp-66845c9868-phvqv",
+        "uid": "2c843057-75b3-11e8-bdbc-b20c0e5c020c",
+        "resourceVersion": "403506",
+        "creationTimestamp": "2018-06-22T00:28:24Z",
+        "labels": {
+          "app": "nodeapp-nodeapp",
+          "pod-template-hash": "2240175424"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "ReplicaSet",
+            "name": "nodeapp-nodeapp-66845c9868",
+            "uid": "2c82728a-75b3-11e8-bdbc-b20c0e5c020c",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ]
+      }) - ModelState is Valid
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 0.2869ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 0.4167ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 572
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "name": "nodeapp-nodeapp-66845c9868-phvqv",
+        "generateName": "nodeapp-nodeapp-66845c9868-",
+        "namespace": "default",
+        "selfLink": "/api/v1/namespaces/default/pods/nodeapp-nodeapp-66845c9868-phvqv",
+        "uid": "2c843057-75b3-11e8-bdbc-b20c0e5c020c",
+        "resourceVersion": "403506",
+        "creationTimestamp": "2018-06-22T00:28:24Z",
+        "labels": {
+          "app": "nodeapp-nodeapp",
+          "pod-template-hash": "2240175424"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "ReplicaSet",
+            "name": "nodeapp-nodeapp-66845c9868",
+            "uid": "2c82728a-75b3-11e8-bdbc-b20c0e5c020c",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ]
+      }) - ModelState is Valid
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 0.2869ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 0.4167ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 572
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "name": "nodeapp-nodeapp-66845c9868-phvqv",
+        "generateName": "nodeapp-nodeapp-66845c9868-",
+        "namespace": "default",
+        "selfLink": "/api/v1/namespaces/default/pods/nodeapp-nodeapp-66845c9868-phvqv",
+        "uid": "2c843057-75b3-11e8-bdbc-b20c0e5c020c",
+        "resourceVersion": "403506",
+        "creationTimestamp": "2018-06-22T00:28:24Z",
+        "labels": {
+          "app": "nodeapp-nodeapp",
+          "pod-template-hash": "2240175424"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "ReplicaSet",
+            "name": "nodeapp-nodeapp-66845c9868",
+            "uid": "2c82728a-75b3-11e8-bdbc-b20c0e5c020c",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ]
+      }) - ModelState is Valid
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 0.4679ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 4.1685ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 572
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "name": "nodeapp-nodeapp-66845c9868-phvqv",
+        "generateName": "nodeapp-nodeapp-66845c9868-",
+        "namespace": "default",
+        "selfLink": "/api/v1/namespaces/default/pods/nodeapp-nodeapp-66845c9868-phvqv",
+        "uid": "2c843057-75b3-11e8-bdbc-b20c0e5c020c",
+        "resourceVersion": "403506",
+        "creationTimestamp": "2018-06-22T00:28:24Z",
+        "labels": {
+          "app": "nodeapp-nodeapp",
+          "pod-template-hash": "2240175424"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "ReplicaSet",
+            "name": "nodeapp-nodeapp-66845c9868",
+            "uid": "2c82728a-75b3-11e8-bdbc-b20c0e5c020c",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ]
+      }) - ModelState is Valid
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 0.4679ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 4.1685ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 562
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "name": "parrot-parrot-549c7c7f4d-2jdqp",
+        "generateName": "parrot-parrot-549c7c7f4d-",
+        "namespace": "default",
+        "selfLink": "/api/v1/namespaces/default/pods/parrot-parrot-549c7c7f4d-2jdqp",
+        "uid": "86d15876-77e3-11e8-bdbc-b20c0e5c020c",
+        "resourceVersion": "708625",
+        "creationTimestamp": "2018-06-24T19:19:33Z",
+        "labels": {
+          "app": "parrot-parrot",
+          "pod-template-hash": "1057373908"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "ReplicaSet",
+            "name": "parrot-parrot-549c7c7f4d",
+            "uid": "86c694fe-77e3-11e8-bdbc-b20c0e5c020c",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ]
+      }) - ModelState is Valid
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 0.2876ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 0.4085ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 562
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "name": "parrot-parrot-549c7c7f4d-2jdqp",
+        "generateName": "parrot-parrot-549c7c7f4d-",
+        "namespace": "default",
+        "selfLink": "/api/v1/namespaces/default/pods/parrot-parrot-549c7c7f4d-2jdqp",
+        "uid": "86d15876-77e3-11e8-bdbc-b20c0e5c020c",
+        "resourceVersion": "708625",
+        "creationTimestamp": "2018-06-24T19:19:33Z",
+        "labels": {
+          "app": "parrot-parrot",
+          "pod-template-hash": "1057373908"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "ReplicaSet",
+            "name": "parrot-parrot-549c7c7f4d",
+            "uid": "86c694fe-77e3-11e8-bdbc-b20c0e5c020c",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ]
+      }) - ModelState is Valid
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 0.2876ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 0.4085ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 552
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 552
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "name": "goapp-goapp-855c67b5b6-k25cj",
+        "generateName": "goapp-goapp-855c67b5b6-",
+        "namespace": "default",
+        "selfLink": "/api/v1/namespaces/default/pods/goapp-goapp-855c67b5b6-k25cj",
+        "uid": "f20dead4-77de-11e8-bdbc-b20c0e5c020c",
+        "resourceVersion": "705953",
+        "creationTimestamp": "2018-06-24T18:46:46Z",
+        "labels": {
+          "app": "goapp-goapp",
+          "pod-template-hash": "4117236162"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "ReplicaSet",
+            "name": "goapp-goapp-855c67b5b6",
+            "uid": "f209c5a5-77de-11e8-bdbc-b20c0e5c020c",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ]
+      }) - ModelState is Valid
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "name": "goapp-goapp-855c67b5b6-k25cj",
+        "generateName": "goapp-goapp-855c67b5b6-",
+        "namespace": "default",
+        "selfLink": "/api/v1/namespaces/default/pods/goapp-goapp-855c67b5b6-k25cj",
+        "uid": "f20dead4-77de-11e8-bdbc-b20c0e5c020c",
+        "resourceVersion": "705953",
+        "creationTimestamp": "2018-06-24T18:46:46Z",
+        "labels": {
+          "app": "goapp-goapp",
+          "pod-template-hash": "4117236162"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "ReplicaSet",
+            "name": "goapp-goapp-855c67b5b6",
+            "uid": "f209c5a5-77de-11e8-bdbc-b20c0e5c020c",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ]
+      }) - ModelState is Valid
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 0.8659ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 0.8659ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 4.2577ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 4.2577ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 572
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 572
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "name": "nodeapp-nodeapp-66845c9868-phvqv",
+        "generateName": "nodeapp-nodeapp-66845c9868-",
+        "namespace": "default",
+        "selfLink": "/api/v1/namespaces/default/pods/nodeapp-nodeapp-66845c9868-phvqv",
+        "uid": "2c843057-75b3-11e8-bdbc-b20c0e5c020c",
+        "resourceVersion": "403506",
+        "creationTimestamp": "2018-06-22T00:28:24Z",
+        "labels": {
+          "app": "nodeapp-nodeapp",
+          "pod-template-hash": "2240175424"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "ReplicaSet",
+            "name": "nodeapp-nodeapp-66845c9868",
+            "uid": "2c82728a-75b3-11e8-bdbc-b20c0e5c020c",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ]
+      }) - ModelState is Valid
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "name": "nodeapp-nodeapp-66845c9868-phvqv",
+        "generateName": "nodeapp-nodeapp-66845c9868-",
+        "namespace": "default",
+        "selfLink": "/api/v1/namespaces/default/pods/nodeapp-nodeapp-66845c9868-phvqv",
+        "uid": "2c843057-75b3-11e8-bdbc-b20c0e5c020c",
+        "resourceVersion": "403506",
+        "creationTimestamp": "2018-06-22T00:28:24Z",
+        "labels": {
+          "app": "nodeapp-nodeapp",
+          "pod-template-hash": "2240175424"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "ReplicaSet",
+            "name": "nodeapp-nodeapp-66845c9868",
+            "uid": "2c82728a-75b3-11e8-bdbc-b20c0e5c020c",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ]
+      }) - ModelState is Valid
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 1.5248ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 1.5248ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 3.2454ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 3.2454ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 552
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 552
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "name": "goapp-goapp-855c67b5b6-k25cj",
+        "generateName": "goapp-goapp-855c67b5b6-",
+        "namespace": "default",
+        "selfLink": "/api/v1/namespaces/default/pods/goapp-goapp-855c67b5b6-k25cj",
+        "uid": "f20dead4-77de-11e8-bdbc-b20c0e5c020c",
+        "resourceVersion": "705953",
+        "creationTimestamp": "2018-06-24T18:46:46Z",
+        "labels": {
+          "app": "goapp-goapp",
+          "pod-template-hash": "4117236162"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "ReplicaSet",
+            "name": "goapp-goapp-855c67b5b6",
+            "uid": "f209c5a5-77de-11e8-bdbc-b20c0e5c020c",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ]
+      }) - ModelState is Valid
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "name": "goapp-goapp-855c67b5b6-k25cj",
+        "generateName": "goapp-goapp-855c67b5b6-",
+        "namespace": "default",
+        "selfLink": "/api/v1/namespaces/default/pods/goapp-goapp-855c67b5b6-k25cj",
+        "uid": "f20dead4-77de-11e8-bdbc-b20c0e5c020c",
+        "resourceVersion": "705953",
+        "creationTimestamp": "2018-06-24T18:46:46Z",
+        "labels": {
+          "app": "goapp-goapp",
+          "pod-template-hash": "4117236162"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "ReplicaSet",
+            "name": "goapp-goapp-855c67b5b6",
+            "uid": "f209c5a5-77de-11e8-bdbc-b20c0e5c020c",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ]
+      }) - ModelState is Valid
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 2.598ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 2.598ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 2.8975ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 2.8975ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 562
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "name": "parrot-parrot-549c7c7f4d-2jdqp",
+        "generateName": "parrot-parrot-549c7c7f4d-",
+        "namespace": "default",
+        "selfLink": "/api/v1/namespaces/default/pods/parrot-parrot-549c7c7f4d-2jdqp",
+        "uid": "86d15876-77e3-11e8-bdbc-b20c0e5c020c",
+        "resourceVersion": "708625",
+        "creationTimestamp": "2018-06-24T19:19:33Z",
+        "labels": {
+          "app": "parrot-parrot",
+          "pod-template-hash": "1057373908"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "ReplicaSet",
+            "name": "parrot-parrot-549c7c7f4d",
+            "uid": "86c694fe-77e3-11e8-bdbc-b20c0e5c020c",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ]
+      }) - ModelState is Valid
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 0.2832ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 0.3782ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 562
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "name": "parrot-parrot-549c7c7f4d-2jdqp",
+        "generateName": "parrot-parrot-549c7c7f4d-",
+        "namespace": "default",
+        "selfLink": "/api/v1/namespaces/default/pods/parrot-parrot-549c7c7f4d-2jdqp",
+        "uid": "86d15876-77e3-11e8-bdbc-b20c0e5c020c",
+        "resourceVersion": "708625",
+        "creationTimestamp": "2018-06-24T19:19:33Z",
+        "labels": {
+          "app": "parrot-parrot",
+          "pod-template-hash": "1057373908"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "ReplicaSet",
+            "name": "parrot-parrot-549c7c7f4d",
+            "uid": "86c694fe-77e3-11e8-bdbc-b20c0e5c020c",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ]
+      }) - ModelState is Valid
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 0.2832ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 0.3782ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 552
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "name": "goapp-goapp-855c67b5b6-k25cj",
+        "generateName": "goapp-goapp-855c67b5b6-",
+        "namespace": "default",
+        "selfLink": "/api/v1/namespaces/default/pods/goapp-goapp-855c67b5b6-k25cj",
+        "uid": "f20dead4-77de-11e8-bdbc-b20c0e5c020c",
+        "resourceVersion": "705953",
+        "creationTimestamp": "2018-06-24T18:46:46Z",
+        "labels": {
+          "app": "goapp-goapp",
+          "pod-template-hash": "4117236162"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "ReplicaSet",
+            "name": "goapp-goapp-855c67b5b6",
+            "uid": "f209c5a5-77de-11e8-bdbc-b20c0e5c020c",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ]
+      }) - ModelState is Valid
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 0.6038ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 552
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "name": "goapp-goapp-855c67b5b6-k25cj",
+        "generateName": "goapp-goapp-855c67b5b6-",
+        "namespace": "default",
+        "selfLink": "/api/v1/namespaces/default/pods/goapp-goapp-855c67b5b6-k25cj",
+        "uid": "f20dead4-77de-11e8-bdbc-b20c0e5c020c",
+        "resourceVersion": "705953",
+        "creationTimestamp": "2018-06-24T18:46:46Z",
+        "labels": {
+          "app": "goapp-goapp",
+          "pod-template-hash": "4117236162"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "ReplicaSet",
+            "name": "goapp-goapp-855c67b5b6",
+            "uid": "f209c5a5-77de-11e8-bdbc-b20c0e5c020c",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ]
+      }) - ModelState is Valid
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 0.6038ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 3.8695ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 3.8695ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 562
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 562
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "name": "parrot-parrot-549c7c7f4d-2jdqp",
+        "generateName": "parrot-parrot-549c7c7f4d-",
+        "namespace": "default",
+        "selfLink": "/api/v1/namespaces/default/pods/parrot-parrot-549c7c7f4d-2jdqp",
+        "uid": "86d15876-77e3-11e8-bdbc-b20c0e5c020c",
+        "resourceVersion": "708625",
+        "creationTimestamp": "2018-06-24T19:19:33Z",
+        "labels": {
+          "app": "parrot-parrot",
+          "pod-template-hash": "1057373908"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "ReplicaSet",
+            "name": "parrot-parrot-549c7c7f4d",
+            "uid": "86c694fe-77e3-11e8-bdbc-b20c0e5c020c",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ]
+      }) - ModelState is Valid
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "name": "parrot-parrot-549c7c7f4d-2jdqp",
+        "generateName": "parrot-parrot-549c7c7f4d-",
+        "namespace": "default",
+        "selfLink": "/api/v1/namespaces/default/pods/parrot-parrot-549c7c7f4d-2jdqp",
+        "uid": "86d15876-77e3-11e8-bdbc-b20c0e5c020c",
+        "resourceVersion": "708625",
+        "creationTimestamp": "2018-06-24T19:19:33Z",
+        "labels": {
+          "app": "parrot-parrot",
+          "pod-template-hash": "1057373908"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "ReplicaSet",
+            "name": "parrot-parrot-549c7c7f4d",
+            "uid": "86c694fe-77e3-11e8-bdbc-b20c0e5c020c",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ]
+      }) - ModelState is Valid
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 1.715ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 1.715ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 2.9748ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 2.9748ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 572
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 572
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "name": "nodeapp-nodeapp-66845c9868-phvqv",
+        "generateName": "nodeapp-nodeapp-66845c9868-",
+        "namespace": "default",
+        "selfLink": "/api/v1/namespaces/default/pods/nodeapp-nodeapp-66845c9868-phvqv",
+        "uid": "2c843057-75b3-11e8-bdbc-b20c0e5c020c",
+        "resourceVersion": "403506",
+        "creationTimestamp": "2018-06-22T00:28:24Z",
+        "labels": {
+          "app": "nodeapp-nodeapp",
+          "pod-template-hash": "2240175424"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "ReplicaSet",
+            "name": "nodeapp-nodeapp-66845c9868",
+            "uid": "2c82728a-75b3-11e8-bdbc-b20c0e5c020c",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ]
+      }) - ModelState is Valid
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "name": "nodeapp-nodeapp-66845c9868-phvqv",
+        "generateName": "nodeapp-nodeapp-66845c9868-",
+        "namespace": "default",
+        "selfLink": "/api/v1/namespaces/default/pods/nodeapp-nodeapp-66845c9868-phvqv",
+        "uid": "2c843057-75b3-11e8-bdbc-b20c0e5c020c",
+        "resourceVersion": "403506",
+        "creationTimestamp": "2018-06-22T00:28:24Z",
+        "labels": {
+          "app": "nodeapp-nodeapp",
+          "pod-template-hash": "2240175424"
+        },
+        "ownerReferences": [
+          {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "ReplicaSet",
+            "name": "nodeapp-nodeapp-66845c9868",
+            "uid": "2c82728a-75b3-11e8-bdbc-b20c0e5c020c",
+            "controller": true,
+            "blockOwnerDeletion": true
+          }
+        ]
+      }) - ModelState is Valid
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 1.6037ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 1.6037ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 2.7028ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 2.7028ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 16
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "name": "value"
+      }) - ModelState is Valid
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 0.4558ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 0.6835ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 16
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "name": "value"
+      }) - ModelState is Valid
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 0.4558ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 0.6835ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 2437
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 2437
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "metadata": {
+          "name": "goapp-goapp-7d799c69ff-4m9kw",
+          "generateName": "goapp-goapp-7d799c69ff-",
+          "namespace": "default",
+          "selfLink": "/api/v1/namespaces/default/pods/goapp-goapp-7d799c69ff-4m9kw",
+          "uid": "86d43cc0-77e4-11e8-bdbc-b20c0e5c020c",
+          "resourceVersion": "709216",
+          "creationTimestamp": "2018-06-24T19:26:43Z",
+          "labels": {
+            "app": "goapp-goapp",
+            "pod-template-hash": "3835572599"
+          },
+          "ownerReferences": [
+            {
+              "apiVersion": "extensions/v1beta1",
+              "kind": "ReplicaSet",
+              "name": "goapp-goapp-7d799c69ff",
+              "uid": "86d24c40-77e4-11e8-bdbc-b20c0e5c020c",
+              "controller": true,
+              "blockOwnerDeletion": true
+            }
+          ]
+        },
+        "spec": {
+          "volumes": [
+            {
+              "name": "default-token-w8ncl",
+              "secret": {
+                "secretName": "default-token-w8ncl",
+                "defaultMode": 420
+              }
+            }
+          ],
+          "containers": [
+            {
+              "name": "goapp",
+              "image": "phippy.azurecr.io/goapp:e022302e4283c47969ebe8c9403791b41debfcd7",
+              "resources": {},
+              "volumeMounts": [
+                {
+                  "name": "default-token-w8ncl",
+                  "readOnly": true,
+                  "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                }
+              ],
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "imagePullPolicy": "Always"
+            }
+          ],
+          "restartPolicy": "Always",
+          "terminationGracePeriodSeconds": 30,
+          "dnsPolicy": "ClusterFirst",
+          "serviceAccountName": "default",
+          "serviceAccount": "default",
+          "nodeName": "aks-agentpool-19990256-0",
+          "securityContext": {},
+          "imagePullSecrets": [
+            {
+              "name": "draft-pullsecret"
+            }
+          ],
+          "schedulerName": "default-scheduler",
+          "tolerations": [
+            {
+              "key": "node.kubernetes.io/not-ready",
+              "operator": "Exists",
+              "effect": "NoExecute",
+              "tolerationSeconds": 300
+            },
+            {
+              "key": "node.kubernetes.io/unreachable",
+              "operator": "Exists",
+              "effect": "NoExecute",
+              "tolerationSeconds": 300
+            }
+          ]
+        },
+        "status": {
+          "phase": "Running",
+          "conditions": [
+            {
+              "type": "Initialized",
+              "status": "True",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-24T19:26:43Z"
+            },
+            {
+              "type": "Ready",
+              "status": "True",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-24T19:26:46Z"
+            },
+            {
+              "type": "PodScheduled",
+              "status": "True",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-24T19:26:43Z"
+            }
+          ],
+          "hostIP": "10.240.0.4",
+          "podIP": "10.244.0.89",
+          "startTime": "2018-06-24T19:26:43Z",
+          "containerStatuses": [
+            {
+              "name": "goapp",
+              "state": {
+                "running": {
+                  "startedAt": "2018-06-24T19:26:45Z"
+                }
+              },
+              "lastState": {},
+              "ready": true,
+              "restartCount": 0,
+              "image": "phippy.azurecr.io/goapp:e022302e4283c47969ebe8c9403791b41debfcd7",
+              "imageID": "docker-pullable://phippy.azurecr.io/goapp@sha256:fcc21f225d442ae52de422924694f21aadbde70e5a895aa2488eaa69021b17b0",
+              "containerID": "docker://c05e0d842b1f0c421eea56ea0e9f3841ee47bd3164704c793a0b8aa44211c157"
+            }
+          ],
+          "qosClass": "BestEffort"
+        }
+      }) - ModelState is Valid
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "metadata": {
+          "name": "goapp-goapp-7d799c69ff-4m9kw",
+          "generateName": "goapp-goapp-7d799c69ff-",
+          "namespace": "default",
+          "selfLink": "/api/v1/namespaces/default/pods/goapp-goapp-7d799c69ff-4m9kw",
+          "uid": "86d43cc0-77e4-11e8-bdbc-b20c0e5c020c",
+          "resourceVersion": "709216",
+          "creationTimestamp": "2018-06-24T19:26:43Z",
+          "labels": {
+            "app": "goapp-goapp",
+            "pod-template-hash": "3835572599"
+          },
+          "ownerReferences": [
+            {
+              "apiVersion": "extensions/v1beta1",
+              "kind": "ReplicaSet",
+              "name": "goapp-goapp-7d799c69ff",
+              "uid": "86d24c40-77e4-11e8-bdbc-b20c0e5c020c",
+              "controller": true,
+              "blockOwnerDeletion": true
+            }
+          ]
+        },
+        "spec": {
+          "volumes": [
+            {
+              "name": "default-token-w8ncl",
+              "secret": {
+                "secretName": "default-token-w8ncl",
+                "defaultMode": 420
+              }
+            }
+          ],
+          "containers": [
+            {
+              "name": "goapp",
+              "image": "phippy.azurecr.io/goapp:e022302e4283c47969ebe8c9403791b41debfcd7",
+              "resources": {},
+              "volumeMounts": [
+                {
+                  "name": "default-token-w8ncl",
+                  "readOnly": true,
+                  "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                }
+              ],
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "imagePullPolicy": "Always"
+            }
+          ],
+          "restartPolicy": "Always",
+          "terminationGracePeriodSeconds": 30,
+          "dnsPolicy": "ClusterFirst",
+          "serviceAccountName": "default",
+          "serviceAccount": "default",
+          "nodeName": "aks-agentpool-19990256-0",
+          "securityContext": {},
+          "imagePullSecrets": [
+            {
+              "name": "draft-pullsecret"
+            }
+          ],
+          "schedulerName": "default-scheduler",
+          "tolerations": [
+            {
+              "key": "node.kubernetes.io/not-ready",
+              "operator": "Exists",
+              "effect": "NoExecute",
+              "tolerationSeconds": 300
+            },
+            {
+              "key": "node.kubernetes.io/unreachable",
+              "operator": "Exists",
+              "effect": "NoExecute",
+              "tolerationSeconds": 300
+            }
+          ]
+        },
+        "status": {
+          "phase": "Running",
+          "conditions": [
+            {
+              "type": "Initialized",
+              "status": "True",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-24T19:26:43Z"
+            },
+            {
+              "type": "Ready",
+              "status": "True",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-24T19:26:46Z"
+            },
+            {
+              "type": "PodScheduled",
+              "status": "True",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-24T19:26:43Z"
+            }
+          ],
+          "hostIP": "10.240.0.4",
+          "podIP": "10.244.0.89",
+          "startTime": "2018-06-24T19:26:43Z",
+          "containerStatuses": [
+            {
+              "name": "goapp",
+              "state": {
+                "running": {
+                  "startedAt": "2018-06-24T19:26:45Z"
+                }
+              },
+              "lastState": {},
+              "ready": true,
+              "restartCount": 0,
+              "image": "phippy.azurecr.io/goapp:e022302e4283c47969ebe8c9403791b41debfcd7",
+              "imageID": "docker-pullable://phippy.azurecr.io/goapp@sha256:fcc21f225d442ae52de422924694f21aadbde70e5a895aa2488eaa69021b17b0",
+              "containerID": "docker://c05e0d842b1f0c421eea56ea0e9f3841ee47bd3164704c793a0b8aa44211c157"
+            }
+          ],
+          "qosClass": "BestEffort"
+        }
+      }) - ModelState is Valid
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 5.2868ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 5.2868ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 6.2916ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 6.2916ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 2512
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 2512
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "metadata": {
+          "name": "goapp-goapp-855c67b5b6-k25cj",
+          "generateName": "goapp-goapp-855c67b5b6-",
+          "namespace": "default",
+          "selfLink": "/api/v1/namespaces/default/pods/goapp-goapp-855c67b5b6-k25cj",
+          "uid": "f20dead4-77de-11e8-bdbc-b20c0e5c020c",
+          "resourceVersion": "709220",
+          "creationTimestamp": "2018-06-24T18:46:46Z",
+          "deletionTimestamp": "2018-06-24T19:27:16Z",
+          "deletionGracePeriodSeconds": 30,
+          "labels": {
+            "app": "goapp-goapp",
+            "pod-template-hash": "4117236162"
+          },
+          "ownerReferences": [
+            {
+              "apiVersion": "extensions/v1beta1",
+              "kind": "ReplicaSet",
+              "name": "goapp-goapp-855c67b5b6",
+              "uid": "f209c5a5-77de-11e8-bdbc-b20c0e5c020c",
+              "controller": true,
+              "blockOwnerDeletion": true
+            }
+          ]
+        },
+        "spec": {
+          "volumes": [
+            {
+              "name": "default-token-w8ncl",
+              "secret": {
+                "secretName": "default-token-w8ncl",
+                "defaultMode": 420
+              }
+            }
+          ],
+          "containers": [
+            {
+              "name": "goapp",
+              "image": "phippy.azurecr.io/goapp:3516661e65b707f44ec8c7f8b01f6bdfcbabf970",
+              "resources": {},
+              "volumeMounts": [
+                {
+                  "name": "default-token-w8ncl",
+                  "readOnly": true,
+                  "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                }
+              ],
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "imagePullPolicy": "Always"
+            }
+          ],
+          "restartPolicy": "Always",
+          "terminationGracePeriodSeconds": 30,
+          "dnsPolicy": "ClusterFirst",
+          "serviceAccountName": "default",
+          "serviceAccount": "default",
+          "nodeName": "aks-agentpool-19990256-0",
+          "securityContext": {},
+          "imagePullSecrets": [
+            {
+              "name": "draft-pullsecret"
+            }
+          ],
+          "schedulerName": "default-scheduler",
+          "tolerations": [
+            {
+              "key": "node.kubernetes.io/not-ready",
+              "operator": "Exists",
+              "effect": "NoExecute",
+              "tolerationSeconds": 300
+            },
+            {
+              "key": "node.kubernetes.io/unreachable",
+              "operator": "Exists",
+              "effect": "NoExecute",
+              "tolerationSeconds": 300
+            }
+          ]
+        },
+        "status": {
+          "phase": "Running",
+          "conditions": [
+            {
+              "type": "Initialized",
+              "status": "True",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-24T18:46:46Z"
+            },
+            {
+              "type": "Ready",
+              "status": "True",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-24T18:46:50Z"
+            },
+            {
+              "type": "PodScheduled",
+              "status": "True",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-24T18:46:46Z"
+            }
+          ],
+          "hostIP": "10.240.0.4",
+          "podIP": "10.244.0.83",
+          "startTime": "2018-06-24T18:46:46Z",
+          "containerStatuses": [
+            {
+              "name": "goapp",
+              "state": {
+                "running": {
+                  "startedAt": "2018-06-24T18:46:49Z"
+                }
+              },
+              "lastState": {},
+              "ready": true,
+              "restartCount": 0,
+              "image": "phippy.azurecr.io/goapp:3516661e65b707f44ec8c7f8b01f6bdfcbabf970",
+              "imageID": "docker-pullable://phippy.azurecr.io/goapp@sha256:c3fce68efce4700c18a87cf3e56515ef8859be2eedb667fd563e9f57d2cebe44",
+              "containerID": "docker://2bd5baa0905d01577a3c122143408b35d60f8d98ebb02d6790304f6e47fe2b5f"
+            }
+          ],
+          "qosClass": "BestEffort"
+        }
+      }) - ModelState is Valid
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "metadata": {
+          "name": "goapp-goapp-855c67b5b6-k25cj",
+          "generateName": "goapp-goapp-855c67b5b6-",
+          "namespace": "default",
+          "selfLink": "/api/v1/namespaces/default/pods/goapp-goapp-855c67b5b6-k25cj",
+          "uid": "f20dead4-77de-11e8-bdbc-b20c0e5c020c",
+          "resourceVersion": "709220",
+          "creationTimestamp": "2018-06-24T18:46:46Z",
+          "deletionTimestamp": "2018-06-24T19:27:16Z",
+          "deletionGracePeriodSeconds": 30,
+          "labels": {
+            "app": "goapp-goapp",
+            "pod-template-hash": "4117236162"
+          },
+          "ownerReferences": [
+            {
+              "apiVersion": "extensions/v1beta1",
+              "kind": "ReplicaSet",
+              "name": "goapp-goapp-855c67b5b6",
+              "uid": "f209c5a5-77de-11e8-bdbc-b20c0e5c020c",
+              "controller": true,
+              "blockOwnerDeletion": true
+            }
+          ]
+        },
+        "spec": {
+          "volumes": [
+            {
+              "name": "default-token-w8ncl",
+              "secret": {
+                "secretName": "default-token-w8ncl",
+                "defaultMode": 420
+              }
+            }
+          ],
+          "containers": [
+            {
+              "name": "goapp",
+              "image": "phippy.azurecr.io/goapp:3516661e65b707f44ec8c7f8b01f6bdfcbabf970",
+              "resources": {},
+              "volumeMounts": [
+                {
+                  "name": "default-token-w8ncl",
+                  "readOnly": true,
+                  "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                }
+              ],
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "imagePullPolicy": "Always"
+            }
+          ],
+          "restartPolicy": "Always",
+          "terminationGracePeriodSeconds": 30,
+          "dnsPolicy": "ClusterFirst",
+          "serviceAccountName": "default",
+          "serviceAccount": "default",
+          "nodeName": "aks-agentpool-19990256-0",
+          "securityContext": {},
+          "imagePullSecrets": [
+            {
+              "name": "draft-pullsecret"
+            }
+          ],
+          "schedulerName": "default-scheduler",
+          "tolerations": [
+            {
+              "key": "node.kubernetes.io/not-ready",
+              "operator": "Exists",
+              "effect": "NoExecute",
+              "tolerationSeconds": 300
+            },
+            {
+              "key": "node.kubernetes.io/unreachable",
+              "operator": "Exists",
+              "effect": "NoExecute",
+              "tolerationSeconds": 300
+            }
+          ]
+        },
+        "status": {
+          "phase": "Running",
+          "conditions": [
+            {
+              "type": "Initialized",
+              "status": "True",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-24T18:46:46Z"
+            },
+            {
+              "type": "Ready",
+              "status": "True",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-24T18:46:50Z"
+            },
+            {
+              "type": "PodScheduled",
+              "status": "True",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-24T18:46:46Z"
+            }
+          ],
+          "hostIP": "10.240.0.4",
+          "podIP": "10.244.0.83",
+          "startTime": "2018-06-24T18:46:46Z",
+          "containerStatuses": [
+            {
+              "name": "goapp",
+              "state": {
+                "running": {
+                  "startedAt": "2018-06-24T18:46:49Z"
+                }
+              },
+              "lastState": {},
+              "ready": true,
+              "restartCount": 0,
+              "image": "phippy.azurecr.io/goapp:3516661e65b707f44ec8c7f8b01f6bdfcbabf970",
+              "imageID": "docker-pullable://phippy.azurecr.io/goapp@sha256:c3fce68efce4700c18a87cf3e56515ef8859be2eedb667fd563e9f57d2cebe44",
+              "containerID": "docker://2bd5baa0905d01577a3c122143408b35d60f8d98ebb02d6790304f6e47fe2b5f"
+            }
+          ],
+          "qosClass": "BestEffort"
+        }
+      }) - ModelState is Valid
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 3.6942ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 3.6942ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 4.3196ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 4.3196ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 2755
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 2755
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "metadata": {
+          "name": "goapp-goapp-855c67b5b6-k25cj",
+          "generateName": "goapp-goapp-855c67b5b6-",
+          "namespace": "default",
+          "selfLink": "/api/v1/namespaces/default/pods/goapp-goapp-855c67b5b6-k25cj",
+          "uid": "f20dead4-77de-11e8-bdbc-b20c0e5c020c",
+          "resourceVersion": "709234",
+          "creationTimestamp": "2018-06-24T18:46:46Z",
+          "deletionTimestamp": "2018-06-24T19:27:16Z",
+          "deletionGracePeriodSeconds": 30,
+          "labels": {
+            "app": "goapp-goapp",
+            "pod-template-hash": "4117236162"
+          },
+          "ownerReferences": [
+            {
+              "apiVersion": "extensions/v1beta1",
+              "kind": "ReplicaSet",
+              "name": "goapp-goapp-855c67b5b6",
+              "uid": "f209c5a5-77de-11e8-bdbc-b20c0e5c020c",
+              "controller": true,
+              "blockOwnerDeletion": true
+            }
+          ]
+        },
+        "spec": {
+          "volumes": [
+            {
+              "name": "default-token-w8ncl",
+              "secret": {
+                "secretName": "default-token-w8ncl",
+                "defaultMode": 420
+              }
+            }
+          ],
+          "containers": [
+            {
+              "name": "goapp",
+              "image": "phippy.azurecr.io/goapp:3516661e65b707f44ec8c7f8b01f6bdfcbabf970",
+              "resources": {},
+              "volumeMounts": [
+                {
+                  "name": "default-token-w8ncl",
+                  "readOnly": true,
+                  "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                }
+              ],
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "imagePullPolicy": "Always"
+            }
+          ],
+          "restartPolicy": "Always",
+          "terminationGracePeriodSeconds": 30,
+          "dnsPolicy": "ClusterFirst",
+          "serviceAccountName": "default",
+          "serviceAccount": "default",
+          "nodeName": "aks-agentpool-19990256-0",
+          "securityContext": {},
+          "imagePullSecrets": [
+            {
+              "name": "draft-pullsecret"
+            }
+          ],
+          "schedulerName": "default-scheduler",
+          "tolerations": [
+            {
+              "key": "node.kubernetes.io/not-ready",
+              "operator": "Exists",
+              "effect": "NoExecute",
+              "tolerationSeconds": 300
+            },
+            {
+              "key": "node.kubernetes.io/unreachable",
+              "operator": "Exists",
+              "effect": "NoExecute",
+              "tolerationSeconds": 300
+            }
+          ]
+        },
+        "status": {
+          "phase": "Running",
+          "conditions": [
+            {
+              "type": "Initialized",
+              "status": "True",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-24T18:46:46Z"
+            },
+            {
+              "type": "Ready",
+              "status": "False",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-24T19:26:47Z",
+              "reason": "ContainersNotReady",
+              "message": "containers with unready status: [goapp]"
+            },
+            {
+              "type": "PodScheduled",
+              "status": "True",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-24T18:46:46Z"
+            }
+          ],
+          "hostIP": "10.240.0.4",
+          "podIP": "10.244.0.83",
+          "startTime": "2018-06-24T18:46:46Z",
+          "containerStatuses": [
+            {
+              "name": "goapp",
+              "state": {
+                "terminated": {
+                  "exitCode": 2,
+                  "reason": "Error",
+                  "startedAt": "2018-06-24T18:46:49Z",
+                  "finishedAt": "2018-06-24T19:26:46Z",
+                  "containerID": "docker://2bd5baa0905d01577a3c122143408b35d60f8d98ebb02d6790304f6e47fe2b5f"
+                }
+              },
+              "lastState": {},
+              "ready": false,
+              "restartCount": 0,
+              "image": "phippy.azurecr.io/goapp:3516661e65b707f44ec8c7f8b01f6bdfcbabf970",
+              "imageID": "docker-pullable://phippy.azurecr.io/goapp@sha256:c3fce68efce4700c18a87cf3e56515ef8859be2eedb667fd563e9f57d2cebe44",
+              "containerID": "docker://2bd5baa0905d01577a3c122143408b35d60f8d98ebb02d6790304f6e47fe2b5f"
+            }
+          ],
+          "qosClass": "BestEffort"
+        }
+      }) - ModelState is Valid
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "metadata": {
+          "name": "goapp-goapp-855c67b5b6-k25cj",
+          "generateName": "goapp-goapp-855c67b5b6-",
+          "namespace": "default",
+          "selfLink": "/api/v1/namespaces/default/pods/goapp-goapp-855c67b5b6-k25cj",
+          "uid": "f20dead4-77de-11e8-bdbc-b20c0e5c020c",
+          "resourceVersion": "709234",
+          "creationTimestamp": "2018-06-24T18:46:46Z",
+          "deletionTimestamp": "2018-06-24T19:27:16Z",
+          "deletionGracePeriodSeconds": 30,
+          "labels": {
+            "app": "goapp-goapp",
+            "pod-template-hash": "4117236162"
+          },
+          "ownerReferences": [
+            {
+              "apiVersion": "extensions/v1beta1",
+              "kind": "ReplicaSet",
+              "name": "goapp-goapp-855c67b5b6",
+              "uid": "f209c5a5-77de-11e8-bdbc-b20c0e5c020c",
+              "controller": true,
+              "blockOwnerDeletion": true
+            }
+          ]
+        },
+        "spec": {
+          "volumes": [
+            {
+              "name": "default-token-w8ncl",
+              "secret": {
+                "secretName": "default-token-w8ncl",
+                "defaultMode": 420
+              }
+            }
+          ],
+          "containers": [
+            {
+              "name": "goapp",
+              "image": "phippy.azurecr.io/goapp:3516661e65b707f44ec8c7f8b01f6bdfcbabf970",
+              "resources": {},
+              "volumeMounts": [
+                {
+                  "name": "default-token-w8ncl",
+                  "readOnly": true,
+                  "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                }
+              ],
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "imagePullPolicy": "Always"
+            }
+          ],
+          "restartPolicy": "Always",
+          "terminationGracePeriodSeconds": 30,
+          "dnsPolicy": "ClusterFirst",
+          "serviceAccountName": "default",
+          "serviceAccount": "default",
+          "nodeName": "aks-agentpool-19990256-0",
+          "securityContext": {},
+          "imagePullSecrets": [
+            {
+              "name": "draft-pullsecret"
+            }
+          ],
+          "schedulerName": "default-scheduler",
+          "tolerations": [
+            {
+              "key": "node.kubernetes.io/not-ready",
+              "operator": "Exists",
+              "effect": "NoExecute",
+              "tolerationSeconds": 300
+            },
+            {
+              "key": "node.kubernetes.io/unreachable",
+              "operator": "Exists",
+              "effect": "NoExecute",
+              "tolerationSeconds": 300
+            }
+          ]
+        },
+        "status": {
+          "phase": "Running",
+          "conditions": [
+            {
+              "type": "Initialized",
+              "status": "True",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-24T18:46:46Z"
+            },
+            {
+              "type": "Ready",
+              "status": "False",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-24T19:26:47Z",
+              "reason": "ContainersNotReady",
+              "message": "containers with unready status: [goapp]"
+            },
+            {
+              "type": "PodScheduled",
+              "status": "True",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-24T18:46:46Z"
+            }
+          ],
+          "hostIP": "10.240.0.4",
+          "podIP": "10.244.0.83",
+          "startTime": "2018-06-24T18:46:46Z",
+          "containerStatuses": [
+            {
+              "name": "goapp",
+              "state": {
+                "terminated": {
+                  "exitCode": 2,
+                  "reason": "Error",
+                  "startedAt": "2018-06-24T18:46:49Z",
+                  "finishedAt": "2018-06-24T19:26:46Z",
+                  "containerID": "docker://2bd5baa0905d01577a3c122143408b35d60f8d98ebb02d6790304f6e47fe2b5f"
+                }
+              },
+              "lastState": {},
+              "ready": false,
+              "restartCount": 0,
+              "image": "phippy.azurecr.io/goapp:3516661e65b707f44ec8c7f8b01f6bdfcbabf970",
+              "imageID": "docker-pullable://phippy.azurecr.io/goapp@sha256:c3fce68efce4700c18a87cf3e56515ef8859be2eedb667fd563e9f57d2cebe44",
+              "containerID": "docker://2bd5baa0905d01577a3c122143408b35d60f8d98ebb02d6790304f6e47fe2b5f"
+            }
+          ],
+          "qosClass": "BestEffort"
+        }
+      }) - ModelState is Valid
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 2.7818ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 2.7818ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 3.885ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 3.885ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 2754
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 2754
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "metadata": {
+          "name": "goapp-goapp-855c67b5b6-k25cj",
+          "generateName": "goapp-goapp-855c67b5b6-",
+          "namespace": "default",
+          "selfLink": "/api/v1/namespaces/default/pods/goapp-goapp-855c67b5b6-k25cj",
+          "uid": "f20dead4-77de-11e8-bdbc-b20c0e5c020c",
+          "resourceVersion": "709239",
+          "creationTimestamp": "2018-06-24T18:46:46Z",
+          "deletionTimestamp": "2018-06-24T19:26:46Z",
+          "deletionGracePeriodSeconds": 0,
+          "labels": {
+            "app": "goapp-goapp",
+            "pod-template-hash": "4117236162"
+          },
+          "ownerReferences": [
+            {
+              "apiVersion": "extensions/v1beta1",
+              "kind": "ReplicaSet",
+              "name": "goapp-goapp-855c67b5b6",
+              "uid": "f209c5a5-77de-11e8-bdbc-b20c0e5c020c",
+              "controller": true,
+              "blockOwnerDeletion": true
+            }
+          ]
+        },
+        "spec": {
+          "volumes": [
+            {
+              "name": "default-token-w8ncl",
+              "secret": {
+                "secretName": "default-token-w8ncl",
+                "defaultMode": 420
+              }
+            }
+          ],
+          "containers": [
+            {
+              "name": "goapp",
+              "image": "phippy.azurecr.io/goapp:3516661e65b707f44ec8c7f8b01f6bdfcbabf970",
+              "resources": {},
+              "volumeMounts": [
+                {
+                  "name": "default-token-w8ncl",
+                  "readOnly": true,
+                  "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                }
+              ],
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "imagePullPolicy": "Always"
+            }
+          ],
+          "restartPolicy": "Always",
+          "terminationGracePeriodSeconds": 30,
+          "dnsPolicy": "ClusterFirst",
+          "serviceAccountName": "default",
+          "serviceAccount": "default",
+          "nodeName": "aks-agentpool-19990256-0",
+          "securityContext": {},
+          "imagePullSecrets": [
+            {
+              "name": "draft-pullsecret"
+            }
+          ],
+          "schedulerName": "default-scheduler",
+          "tolerations": [
+            {
+              "key": "node.kubernetes.io/not-ready",
+              "operator": "Exists",
+              "effect": "NoExecute",
+              "tolerationSeconds": 300
+            },
+            {
+              "key": "node.kubernetes.io/unreachable",
+              "operator": "Exists",
+              "effect": "NoExecute",
+              "tolerationSeconds": 300
+            }
+          ]
+        },
+        "status": {
+          "phase": "Running",
+          "conditions": [
+            {
+              "type": "Initialized",
+              "status": "True",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-24T18:46:46Z"
+            },
+            {
+              "type": "Ready",
+              "status": "False",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-24T19:26:47Z",
+              "reason": "ContainersNotReady",
+              "message": "containers with unready status: [goapp]"
+            },
+            {
+              "type": "PodScheduled",
+              "status": "True",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-24T18:46:46Z"
+            }
+          ],
+          "hostIP": "10.240.0.4",
+          "podIP": "10.244.0.83",
+          "startTime": "2018-06-24T18:46:46Z",
+          "containerStatuses": [
+            {
+              "name": "goapp",
+              "state": {
+                "terminated": {
+                  "exitCode": 2,
+                  "reason": "Error",
+                  "startedAt": "2018-06-24T18:46:49Z",
+                  "finishedAt": "2018-06-24T19:26:46Z",
+                  "containerID": "docker://2bd5baa0905d01577a3c122143408b35d60f8d98ebb02d6790304f6e47fe2b5f"
+                }
+              },
+              "lastState": {},
+              "ready": false,
+              "restartCount": 0,
+              "image": "phippy.azurecr.io/goapp:3516661e65b707f44ec8c7f8b01f6bdfcbabf970",
+              "imageID": "docker-pullable://phippy.azurecr.io/goapp@sha256:c3fce68efce4700c18a87cf3e56515ef8859be2eedb667fd563e9f57d2cebe44",
+              "containerID": "docker://2bd5baa0905d01577a3c122143408b35d60f8d98ebb02d6790304f6e47fe2b5f"
+            }
+          ],
+          "qosClass": "BestEffort"
+        }
+      }) - ModelState is Valid
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "metadata": {
+          "name": "goapp-goapp-855c67b5b6-k25cj",
+          "generateName": "goapp-goapp-855c67b5b6-",
+          "namespace": "default",
+          "selfLink": "/api/v1/namespaces/default/pods/goapp-goapp-855c67b5b6-k25cj",
+          "uid": "f20dead4-77de-11e8-bdbc-b20c0e5c020c",
+          "resourceVersion": "709239",
+          "creationTimestamp": "2018-06-24T18:46:46Z",
+          "deletionTimestamp": "2018-06-24T19:26:46Z",
+          "deletionGracePeriodSeconds": 0,
+          "labels": {
+            "app": "goapp-goapp",
+            "pod-template-hash": "4117236162"
+          },
+          "ownerReferences": [
+            {
+              "apiVersion": "extensions/v1beta1",
+              "kind": "ReplicaSet",
+              "name": "goapp-goapp-855c67b5b6",
+              "uid": "f209c5a5-77de-11e8-bdbc-b20c0e5c020c",
+              "controller": true,
+              "blockOwnerDeletion": true
+            }
+          ]
+        },
+        "spec": {
+          "volumes": [
+            {
+              "name": "default-token-w8ncl",
+              "secret": {
+                "secretName": "default-token-w8ncl",
+                "defaultMode": 420
+              }
+            }
+          ],
+          "containers": [
+            {
+              "name": "goapp",
+              "image": "phippy.azurecr.io/goapp:3516661e65b707f44ec8c7f8b01f6bdfcbabf970",
+              "resources": {},
+              "volumeMounts": [
+                {
+                  "name": "default-token-w8ncl",
+                  "readOnly": true,
+                  "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                }
+              ],
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "imagePullPolicy": "Always"
+            }
+          ],
+          "restartPolicy": "Always",
+          "terminationGracePeriodSeconds": 30,
+          "dnsPolicy": "ClusterFirst",
+          "serviceAccountName": "default",
+          "serviceAccount": "default",
+          "nodeName": "aks-agentpool-19990256-0",
+          "securityContext": {},
+          "imagePullSecrets": [
+            {
+              "name": "draft-pullsecret"
+            }
+          ],
+          "schedulerName": "default-scheduler",
+          "tolerations": [
+            {
+              "key": "node.kubernetes.io/not-ready",
+              "operator": "Exists",
+              "effect": "NoExecute",
+              "tolerationSeconds": 300
+            },
+            {
+              "key": "node.kubernetes.io/unreachable",
+              "operator": "Exists",
+              "effect": "NoExecute",
+              "tolerationSeconds": 300
+            }
+          ]
+        },
+        "status": {
+          "phase": "Running",
+          "conditions": [
+            {
+              "type": "Initialized",
+              "status": "True",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-24T18:46:46Z"
+            },
+            {
+              "type": "Ready",
+              "status": "False",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-24T19:26:47Z",
+              "reason": "ContainersNotReady",
+              "message": "containers with unready status: [goapp]"
+            },
+            {
+              "type": "PodScheduled",
+              "status": "True",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-24T18:46:46Z"
+            }
+          ],
+          "hostIP": "10.240.0.4",
+          "podIP": "10.244.0.83",
+          "startTime": "2018-06-24T18:46:46Z",
+          "containerStatuses": [
+            {
+              "name": "goapp",
+              "state": {
+                "terminated": {
+                  "exitCode": 2,
+                  "reason": "Error",
+                  "startedAt": "2018-06-24T18:46:49Z",
+                  "finishedAt": "2018-06-24T19:26:46Z",
+                  "containerID": "docker://2bd5baa0905d01577a3c122143408b35d60f8d98ebb02d6790304f6e47fe2b5f"
+                }
+              },
+              "lastState": {},
+              "ready": false,
+              "restartCount": 0,
+              "image": "phippy.azurecr.io/goapp:3516661e65b707f44ec8c7f8b01f6bdfcbabf970",
+              "imageID": "docker-pullable://phippy.azurecr.io/goapp@sha256:c3fce68efce4700c18a87cf3e56515ef8859be2eedb667fd563e9f57d2cebe44",
+              "containerID": "docker://2bd5baa0905d01577a3c122143408b35d60f8d98ebb02d6790304f6e47fe2b5f"
+            }
+          ],
+          "qosClass": "BestEffort"
+        }
+      }) - ModelState is Valid
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 2.9137ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 2.9137ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 4.1424ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 4.1424ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 2516
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 2516
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "metadata": {
+          "name": "parrot-parrot-549c7c7f4d-2jdqp",
+          "generateName": "parrot-parrot-549c7c7f4d-",
+          "namespace": "default",
+          "selfLink": "/api/v1/namespaces/default/pods/parrot-parrot-549c7c7f4d-2jdqp",
+          "uid": "86d15876-77e3-11e8-bdbc-b20c0e5c020c",
+          "resourceVersion": "708625",
+          "creationTimestamp": "2018-06-24T19:19:33Z",
+          "labels": {
+            "app": "parrot-parrot",
+            "pod-template-hash": "1057373908"
+          },
+          "ownerReferences": [
+            {
+              "apiVersion": "extensions/v1beta1",
+              "kind": "ReplicaSet",
+              "name": "parrot-parrot-549c7c7f4d",
+              "uid": "86c694fe-77e3-11e8-bdbc-b20c0e5c020c",
+              "controller": true,
+              "blockOwnerDeletion": true
+            }
+          ]
+        },
+        "spec": {
+          "volumes": [
+            {
+              "name": "default-token-w8ncl",
+              "secret": {
+                "secretName": "default-token-w8ncl",
+                "defaultMode": 420
+              }
+            }
+          ],
+          "containers": [
+            {
+              "name": "parrot",
+              "image": "phippy.azurecr.io/parrot:af13af87a3245aff9251bfd9acee435e117021aa",
+              "env": [
+                {
+                  "name": "ASPNETCORE_ENVIRONMENT",
+                  "value": "Development"
+                }
+              ],
+              "resources": {},
+              "volumeMounts": [
+                {
+                  "name": "default-token-w8ncl",
+                  "readOnly": true,
+                  "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                }
+              ],
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "imagePullPolicy": "Always"
+            }
+          ],
+          "restartPolicy": "Always",
+          "terminationGracePeriodSeconds": 30,
+          "dnsPolicy": "ClusterFirst",
+          "serviceAccountName": "default",
+          "serviceAccount": "default",
+          "nodeName": "aks-agentpool-19990256-0",
+          "securityContext": {},
+          "imagePullSecrets": [
+            {
+              "name": "draft-pullsecret"
+            }
+          ],
+          "schedulerName": "default-scheduler",
+          "tolerations": [
+            {
+              "key": "node.kubernetes.io/not-ready",
+              "operator": "Exists",
+              "effect": "NoExecute",
+              "tolerationSeconds": 300
+            },
+            {
+              "key": "node.kubernetes.io/unreachable",
+              "operator": "Exists",
+              "effect": "NoExecute",
+              "tolerationSeconds": 300
+            }
+          ]
+        },
+        "status": {
+          "phase": "Running",
+          "conditions": [
+            {
+              "type": "Initialized",
+              "status": "True",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-24T19:19:33Z"
+            },
+            {
+              "type": "Ready",
+              "status": "True",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-24T19:19:37Z"
+            },
+            {
+              "type": "PodScheduled",
+              "status": "True",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-24T19:19:33Z"
+            }
+          ],
+          "hostIP": "10.240.0.4",
+          "podIP": "10.244.0.88",
+          "startTime": "2018-06-24T19:19:33Z",
+          "containerStatuses": [
+            {
+              "name": "parrot",
+              "state": {
+                "running": {
+                  "startedAt": "2018-06-24T19:19:36Z"
+                }
+              },
+              "lastState": {},
+              "ready": true,
+              "restartCount": 0,
+              "image": "phippy.azurecr.io/parrot:af13af87a3245aff9251bfd9acee435e117021aa",
+              "imageID": "docker-pullable://phippy.azurecr.io/parrot@sha256:2144cbdfd240e7e52dc94e09edf1f90cb1240ee4806dc29b3d4b64874d4ee035",
+              "containerID": "docker://cec33764f1eb1556b723904d79c60d3f53e334e42475921de68092671237d825"
+            }
+          ],
+          "qosClass": "BestEffort"
+        }
+      }) - ModelState is Valid
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "metadata": {
+          "name": "parrot-parrot-549c7c7f4d-2jdqp",
+          "generateName": "parrot-parrot-549c7c7f4d-",
+          "namespace": "default",
+          "selfLink": "/api/v1/namespaces/default/pods/parrot-parrot-549c7c7f4d-2jdqp",
+          "uid": "86d15876-77e3-11e8-bdbc-b20c0e5c020c",
+          "resourceVersion": "708625",
+          "creationTimestamp": "2018-06-24T19:19:33Z",
+          "labels": {
+            "app": "parrot-parrot",
+            "pod-template-hash": "1057373908"
+          },
+          "ownerReferences": [
+            {
+              "apiVersion": "extensions/v1beta1",
+              "kind": "ReplicaSet",
+              "name": "parrot-parrot-549c7c7f4d",
+              "uid": "86c694fe-77e3-11e8-bdbc-b20c0e5c020c",
+              "controller": true,
+              "blockOwnerDeletion": true
+            }
+          ]
+        },
+        "spec": {
+          "volumes": [
+            {
+              "name": "default-token-w8ncl",
+              "secret": {
+                "secretName": "default-token-w8ncl",
+                "defaultMode": 420
+              }
+            }
+          ],
+          "containers": [
+            {
+              "name": "parrot",
+              "image": "phippy.azurecr.io/parrot:af13af87a3245aff9251bfd9acee435e117021aa",
+              "env": [
+                {
+                  "name": "ASPNETCORE_ENVIRONMENT",
+                  "value": "Development"
+                }
+              ],
+              "resources": {},
+              "volumeMounts": [
+                {
+                  "name": "default-token-w8ncl",
+                  "readOnly": true,
+                  "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                }
+              ],
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "imagePullPolicy": "Always"
+            }
+          ],
+          "restartPolicy": "Always",
+          "terminationGracePeriodSeconds": 30,
+          "dnsPolicy": "ClusterFirst",
+          "serviceAccountName": "default",
+          "serviceAccount": "default",
+          "nodeName": "aks-agentpool-19990256-0",
+          "securityContext": {},
+          "imagePullSecrets": [
+            {
+              "name": "draft-pullsecret"
+            }
+          ],
+          "schedulerName": "default-scheduler",
+          "tolerations": [
+            {
+              "key": "node.kubernetes.io/not-ready",
+              "operator": "Exists",
+              "effect": "NoExecute",
+              "tolerationSeconds": 300
+            },
+            {
+              "key": "node.kubernetes.io/unreachable",
+              "operator": "Exists",
+              "effect": "NoExecute",
+              "tolerationSeconds": 300
+            }
+          ]
+        },
+        "status": {
+          "phase": "Running",
+          "conditions": [
+            {
+              "type": "Initialized",
+              "status": "True",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-24T19:19:33Z"
+            },
+            {
+              "type": "Ready",
+              "status": "True",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-24T19:19:37Z"
+            },
+            {
+              "type": "PodScheduled",
+              "status": "True",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-24T19:19:33Z"
+            }
+          ],
+          "hostIP": "10.240.0.4",
+          "podIP": "10.244.0.88",
+          "startTime": "2018-06-24T19:19:33Z",
+          "containerStatuses": [
+            {
+              "name": "parrot",
+              "state": {
+                "running": {
+                  "startedAt": "2018-06-24T19:19:36Z"
+                }
+              },
+              "lastState": {},
+              "ready": true,
+              "restartCount": 0,
+              "image": "phippy.azurecr.io/parrot:af13af87a3245aff9251bfd9acee435e117021aa",
+              "imageID": "docker-pullable://phippy.azurecr.io/parrot@sha256:2144cbdfd240e7e52dc94e09edf1f90cb1240ee4806dc29b3d4b64874d4ee035",
+              "containerID": "docker://cec33764f1eb1556b723904d79c60d3f53e334e42475921de68092671237d825"
+            }
+          ],
+          "qosClass": "BestEffort"
+        }
+      }) - ModelState is Valid
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 3.0927ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 3.0927ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 4.6492ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 4.6492ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 2437
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "metadata": {
+          "name": "goapp-goapp-7d799c69ff-4m9kw",
+          "generateName": "goapp-goapp-7d799c69ff-",
+          "namespace": "default",
+          "selfLink": "/api/v1/namespaces/default/pods/goapp-goapp-7d799c69ff-4m9kw",
+          "uid": "86d43cc0-77e4-11e8-bdbc-b20c0e5c020c",
+          "resourceVersion": "709216",
+          "creationTimestamp": "2018-06-24T19:26:43Z",
+          "labels": {
+            "app": "goapp-goapp",
+            "pod-template-hash": "3835572599"
+          },
+          "ownerReferences": [
+            {
+              "apiVersion": "extensions/v1beta1",
+              "kind": "ReplicaSet",
+              "name": "goapp-goapp-7d799c69ff",
+              "uid": "86d24c40-77e4-11e8-bdbc-b20c0e5c020c",
+              "controller": true,
+              "blockOwnerDeletion": true
+            }
+          ]
+        },
+        "spec": {
+          "volumes": [
+            {
+              "name": "default-token-w8ncl",
+              "secret": {
+                "secretName": "default-token-w8ncl",
+                "defaultMode": 420
+              }
+            }
+          ],
+          "containers": [
+            {
+              "name": "goapp",
+              "image": "phippy.azurecr.io/goapp:e022302e4283c47969ebe8c9403791b41debfcd7",
+              "resources": {},
+              "volumeMounts": [
+                {
+                  "name": "default-token-w8ncl",
+                  "readOnly": true,
+                  "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                }
+              ],
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "imagePullPolicy": "Always"
+            }
+          ],
+          "restartPolicy": "Always",
+          "terminationGracePeriodSeconds": 30,
+          "dnsPolicy": "ClusterFirst",
+          "serviceAccountName": "default",
+          "serviceAccount": "default",
+          "nodeName": "aks-agentpool-19990256-0",
+          "securityContext": {},
+          "imagePullSecrets": [
+            {
+              "name": "draft-pullsecret"
+            }
+          ],
+          "schedulerName": "default-scheduler",
+          "tolerations": [
+            {
+              "key": "node.kubernetes.io/not-ready",
+              "operator": "Exists",
+              "effect": "NoExecute",
+              "tolerationSeconds": 300
+            },
+            {
+              "key": "node.kubernetes.io/unreachable",
+              "operator": "Exists",
+              "effect": "NoExecute",
+              "tolerationSeconds": 300
+            }
+          ]
+        },
+        "status": {
+          "phase": "Running",
+          "conditions": [
+            {
+              "type": "Initialized",
+              "status": "True",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-24T19:26:43Z"
+            },
+            {
+              "type": "Ready",
+              "status": "True",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-24T19:26:46Z"
+            },
+            {
+              "type": "PodScheduled",
+              "status": "True",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-24T19:26:43Z"
+            }
+          ],
+          "hostIP": "10.240.0.4",
+          "podIP": "10.244.0.89",
+          "startTime": "2018-06-24T19:26:43Z",
+          "containerStatuses": [
+            {
+              "name": "goapp",
+              "state": {
+                "running": {
+                  "startedAt": "2018-06-24T19:26:45Z"
+                }
+              },
+              "lastState": {},
+              "ready": true,
+              "restartCount": 0,
+              "image": "phippy.azurecr.io/goapp:e022302e4283c47969ebe8c9403791b41debfcd7",
+              "imageID": "docker-pullable://phippy.azurecr.io/goapp@sha256:fcc21f225d442ae52de422924694f21aadbde70e5a895aa2488eaa69021b17b0",
+              "containerID": "docker://c05e0d842b1f0c421eea56ea0e9f3841ee47bd3164704c793a0b8aa44211c157"
+            }
+          ],
+          "qosClass": "BestEffort"
+        }
+      }) - ModelState is Valid
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 0.624ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 0.7247ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 2437
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "metadata": {
+          "name": "goapp-goapp-7d799c69ff-4m9kw",
+          "generateName": "goapp-goapp-7d799c69ff-",
+          "namespace": "default",
+          "selfLink": "/api/v1/namespaces/default/pods/goapp-goapp-7d799c69ff-4m9kw",
+          "uid": "86d43cc0-77e4-11e8-bdbc-b20c0e5c020c",
+          "resourceVersion": "709216",
+          "creationTimestamp": "2018-06-24T19:26:43Z",
+          "labels": {
+            "app": "goapp-goapp",
+            "pod-template-hash": "3835572599"
+          },
+          "ownerReferences": [
+            {
+              "apiVersion": "extensions/v1beta1",
+              "kind": "ReplicaSet",
+              "name": "goapp-goapp-7d799c69ff",
+              "uid": "86d24c40-77e4-11e8-bdbc-b20c0e5c020c",
+              "controller": true,
+              "blockOwnerDeletion": true
+            }
+          ]
+        },
+        "spec": {
+          "volumes": [
+            {
+              "name": "default-token-w8ncl",
+              "secret": {
+                "secretName": "default-token-w8ncl",
+                "defaultMode": 420
+              }
+            }
+          ],
+          "containers": [
+            {
+              "name": "goapp",
+              "image": "phippy.azurecr.io/goapp:e022302e4283c47969ebe8c9403791b41debfcd7",
+              "resources": {},
+              "volumeMounts": [
+                {
+                  "name": "default-token-w8ncl",
+                  "readOnly": true,
+                  "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                }
+              ],
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "imagePullPolicy": "Always"
+            }
+          ],
+          "restartPolicy": "Always",
+          "terminationGracePeriodSeconds": 30,
+          "dnsPolicy": "ClusterFirst",
+          "serviceAccountName": "default",
+          "serviceAccount": "default",
+          "nodeName": "aks-agentpool-19990256-0",
+          "securityContext": {},
+          "imagePullSecrets": [
+            {
+              "name": "draft-pullsecret"
+            }
+          ],
+          "schedulerName": "default-scheduler",
+          "tolerations": [
+            {
+              "key": "node.kubernetes.io/not-ready",
+              "operator": "Exists",
+              "effect": "NoExecute",
+              "tolerationSeconds": 300
+            },
+            {
+              "key": "node.kubernetes.io/unreachable",
+              "operator": "Exists",
+              "effect": "NoExecute",
+              "tolerationSeconds": 300
+            }
+          ]
+        },
+        "status": {
+          "phase": "Running",
+          "conditions": [
+            {
+              "type": "Initialized",
+              "status": "True",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-24T19:26:43Z"
+            },
+            {
+              "type": "Ready",
+              "status": "True",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-24T19:26:46Z"
+            },
+            {
+              "type": "PodScheduled",
+              "status": "True",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-24T19:26:43Z"
+            }
+          ],
+          "hostIP": "10.240.0.4",
+          "podIP": "10.244.0.89",
+          "startTime": "2018-06-24T19:26:43Z",
+          "containerStatuses": [
+            {
+              "name": "goapp",
+              "state": {
+                "running": {
+                  "startedAt": "2018-06-24T19:26:45Z"
+                }
+              },
+              "lastState": {},
+              "ready": true,
+              "restartCount": 0,
+              "image": "phippy.azurecr.io/goapp:e022302e4283c47969ebe8c9403791b41debfcd7",
+              "imageID": "docker-pullable://phippy.azurecr.io/goapp@sha256:fcc21f225d442ae52de422924694f21aadbde70e5a895aa2488eaa69021b17b0",
+              "containerID": "docker://c05e0d842b1f0c421eea56ea0e9f3841ee47bd3164704c793a0b8aa44211c157"
+            }
+          ],
+          "qosClass": "BestEffort"
+        }
+      }) - ModelState is Valid
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 0.624ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 0.7247ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 2517
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "metadata": {
+          "name": "nodeapp-nodeapp-66845c9868-phvqv",
+          "generateName": "nodeapp-nodeapp-66845c9868-",
+          "namespace": "default",
+          "selfLink": "/api/v1/namespaces/default/pods/nodeapp-nodeapp-66845c9868-phvqv",
+          "uid": "2c843057-75b3-11e8-bdbc-b20c0e5c020c",
+          "resourceVersion": "403506",
+          "creationTimestamp": "2018-06-22T00:28:24Z",
+          "labels": {
+            "app": "nodeapp-nodeapp",
+            "pod-template-hash": "2240175424"
+          },
+          "ownerReferences": [
+            {
+              "apiVersion": "extensions/v1beta1",
+              "kind": "ReplicaSet",
+              "name": "nodeapp-nodeapp-66845c9868",
+              "uid": "2c82728a-75b3-11e8-bdbc-b20c0e5c020c",
+              "controller": true,
+              "blockOwnerDeletion": true
+            }
+          ]
+        },
+        "spec": {
+          "volumes": [
+            {
+              "name": "default-token-w8ncl",
+              "secret": {
+                "secretName": "default-token-w8ncl",
+                "defaultMode": 420
+              }
+            }
+          ],
+          "containers": [
+            {
+              "name": "nodeapp",
+              "image": "phippy.azurecr.io/nodeapp:a11a2889166b4e3031ac506e35c238d9f8756fa3",
+              "ports": [
+                {
+                  "containerPort": 3000,
+                  "protocol": "TCP"
+                }
+              ],
+              "resources": {},
+              "volumeMounts": [
+                {
+                  "name": "default-token-w8ncl",
+                  "readOnly": true,
+                  "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                }
+              ],
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "imagePullPolicy": "Always"
+            }
+          ],
+          "restartPolicy": "Always",
+          "terminationGracePeriodSeconds": 30,
+          "dnsPolicy": "ClusterFirst",
+          "serviceAccountName": "default",
+          "serviceAccount": "default",
+          "nodeName": "aks-agentpool-19990256-0",
+          "securityContext": {},
+          "imagePullSecrets": [
+            {
+              "name": "draft-pullsecret"
+            }
+          ],
+          "schedulerName": "default-scheduler",
+          "tolerations": [
+            {
+              "key": "node.kubernetes.io/not-ready",
+              "operator": "Exists",
+              "effect": "NoExecute",
+              "tolerationSeconds": 300
+            },
+            {
+              "key": "node.kubernetes.io/unreachable",
+              "operator": "Exists",
+              "effect": "NoExecute",
+              "tolerationSeconds": 300
+            }
+          ]
+        },
+        "status": {
+          "phase": "Running",
+          "conditions": [
+            {
+              "type": "Initialized",
+              "status": "True",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-22T00:28:24Z"
+            },
+            {
+              "type": "Ready",
+              "status": "True",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-22T00:28:26Z"
+            },
+            {
+              "type": "PodScheduled",
+              "status": "True",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-22T00:28:24Z"
+            }
+          ],
+          "hostIP": "10.240.0.4",
+          "podIP": "10.244.0.53",
+          "startTime": "2018-06-22T00:28:24Z",
+          "containerStatuses": [
+            {
+              "name": "nodeapp",
+              "state": {
+                "running": {
+                  "startedAt": "2018-06-22T00:28:26Z"
+                }
+              },
+              "lastState": {},
+              "ready": true,
+              "restartCount": 0,
+              "image": "phippy.azurecr.io/nodeapp:a11a2889166b4e3031ac506e35c238d9f8756fa3",
+              "imageID": "docker-pullable://phippy.azurecr.io/nodeapp@sha256:b6cddce8c015b215bf1268420825b9ec3fca9e4075aee42bacf264cd055c010f",
+              "containerID": "docker://874c69c9b6a8cf4c9bc820ef762d55133fffd43074f52f15f1cb6388f371e51a"
+            }
+          ],
+          "qosClass": "BestEffort"
+        }
+      }) - ModelState is Valid
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 0.5564ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus application/json 2517
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method api.Controllers.ClusterStatusController.Post (parrot) with arguments ({
+        "metadata": {
+          "name": "nodeapp-nodeapp-66845c9868-phvqv",
+          "generateName": "nodeapp-nodeapp-66845c9868-",
+          "namespace": "default",
+          "selfLink": "/api/v1/namespaces/default/pods/nodeapp-nodeapp-66845c9868-phvqv",
+          "uid": "2c843057-75b3-11e8-bdbc-b20c0e5c020c",
+          "resourceVersion": "403506",
+          "creationTimestamp": "2018-06-22T00:28:24Z",
+          "labels": {
+            "app": "nodeapp-nodeapp",
+            "pod-template-hash": "2240175424"
+          },
+          "ownerReferences": [
+            {
+              "apiVersion": "extensions/v1beta1",
+              "kind": "ReplicaSet",
+              "name": "nodeapp-nodeapp-66845c9868",
+              "uid": "2c82728a-75b3-11e8-bdbc-b20c0e5c020c",
+              "controller": true,
+              "blockOwnerDeletion": true
+            }
+          ]
+        },
+        "spec": {
+          "volumes": [
+            {
+              "name": "default-token-w8ncl",
+              "secret": {
+                "secretName": "default-token-w8ncl",
+                "defaultMode": 420
+              }
+            }
+          ],
+          "containers": [
+            {
+              "name": "nodeapp",
+              "image": "phippy.azurecr.io/nodeapp:a11a2889166b4e3031ac506e35c238d9f8756fa3",
+              "ports": [
+                {
+                  "containerPort": 3000,
+                  "protocol": "TCP"
+                }
+              ],
+              "resources": {},
+              "volumeMounts": [
+                {
+                  "name": "default-token-w8ncl",
+                  "readOnly": true,
+                  "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                }
+              ],
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "imagePullPolicy": "Always"
+            }
+          ],
+          "restartPolicy": "Always",
+          "terminationGracePeriodSeconds": 30,
+          "dnsPolicy": "ClusterFirst",
+          "serviceAccountName": "default",
+          "serviceAccount": "default",
+          "nodeName": "aks-agentpool-19990256-0",
+          "securityContext": {},
+          "imagePullSecrets": [
+            {
+              "name": "draft-pullsecret"
+            }
+          ],
+          "schedulerName": "default-scheduler",
+          "tolerations": [
+            {
+              "key": "node.kubernetes.io/not-ready",
+              "operator": "Exists",
+              "effect": "NoExecute",
+              "tolerationSeconds": 300
+            },
+            {
+              "key": "node.kubernetes.io/unreachable",
+              "operator": "Exists",
+              "effect": "NoExecute",
+              "tolerationSeconds": 300
+            }
+          ]
+        },
+        "status": {
+          "phase": "Running",
+          "conditions": [
+            {
+              "type": "Initialized",
+              "status": "True",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-22T00:28:24Z"
+            },
+            {
+              "type": "Ready",
+              "status": "True",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-22T00:28:26Z"
+            },
+            {
+              "type": "PodScheduled",
+              "status": "True",
+              "lastProbeTime": null,
+              "lastTransitionTime": "2018-06-22T00:28:24Z"
+            }
+          ],
+          "hostIP": "10.240.0.4",
+          "podIP": "10.244.0.53",
+          "startTime": "2018-06-22T00:28:24Z",
+          "containerStatuses": [
+            {
+              "name": "nodeapp",
+              "state": {
+                "running": {
+                  "startedAt": "2018-06-22T00:28:26Z"
+                }
+              },
+              "lastState": {},
+              "ready": true,
+              "restartCount": 0,
+              "image": "phippy.azurecr.io/nodeapp:a11a2889166b4e3031ac506e35c238d9f8756fa3",
+              "imageID": "docker-pullable://phippy.azurecr.io/nodeapp@sha256:b6cddce8c015b215bf1268420825b9ec3fca9e4075aee42bacf264cd055c010f",
+              "containerID": "docker://874c69c9b6a8cf4c9bc820ef762d55133fffd43074f52f15f1cb6388f371e51a"
+            }
+          ],
+          "qosClass": "BestEffort"
+        }
+      }) - ModelState is Valid
+[40m[37mdbug[39m[22m[49m: api.Controllers.ClusterStatusController[0]
+      Incoming Cluster Update
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 200
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action api.Controllers.ClusterStatusController.Post (parrot) in 0.5564ms
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 2.227ms 200 
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 2.227ms 200 

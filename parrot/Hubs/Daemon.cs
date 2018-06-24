@@ -1,5 +1,3 @@
-
-
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.SignalR;
 
@@ -26,6 +24,11 @@ namespace parrot
         public async void updateUserCount()
         {
             await Clients.All.SendAsync("userCountUpdated", _counter);
+        }
+
+        public async void updateClusterView(object metadata)
+        {
+            await Clients.All.SendAsync("clusterViewUpdated", metadata);
         }
     }
 }

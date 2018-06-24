@@ -11,6 +11,10 @@ connection.on("userCountUpdated", (userCount) => {
     userCountUi.textContent = userCount;
 });
 
+connection.on('clusterViewUpdated', (metadata) => {
+    console.log(metadata);
+});
+
 connection
     .start()
     .then(() => {

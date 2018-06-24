@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.SignalR;
+using parrot.Models;
 
 namespace parrot
 {
@@ -26,9 +27,9 @@ namespace parrot
             await Clients.All.SendAsync("userCountUpdated", _counter);
         }
 
-        public async void updateClusterView(object metadata)
+        public async void updateClusterView(Pod pod)
         {
-            await Clients.All.SendAsync("clusterViewUpdated", metadata);
+            await Clients.All.SendAsync("clusterViewUpdated", pod);
         }
     }
 }

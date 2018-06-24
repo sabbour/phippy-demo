@@ -11,8 +11,12 @@ connection.on("userCountUpdated", (userCount) => {
     userCountUi.textContent = userCount;
 });
 
-connection.on('clusterViewUpdated', (metadata) => {
-    console.log(metadata);
+connection.on('clusterViewUpdated', (pod) => {
+    console.log(pod);
+    var li = document.createElement('li');
+    var textNode = document.createTextNode(pod.name + ' namespace: (' + pod.nameSpace + ') ' + pod.action);
+    li.appendChild(textNode);
+    document.getElementById('pods').appendChild(li);
 });
 
 connection

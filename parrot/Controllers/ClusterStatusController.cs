@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using parrot;
 using parrot.Models;
 
 namespace api.Controllers
@@ -15,11 +16,13 @@ namespace api.Controllers
     public class ClusterStatusController : Controller
     {   
 
-        public ClusterStatusController(ILogger<ClusterStatusController> logger)
+        public ClusterStatusController(ILogger<ClusterStatusController> logger, DaemonHub hub)
         {
+            _hub = hub;
             _logger = logger;
         }
 
+        private DaemonHub _hub;
         private readonly ILogger _logger;
 
         [HttpGet]
@@ -29,18 +32,10 @@ namespace api.Controllers
         }
 
         [HttpPost]
-        public ActionResult Post([FromBody]dynamic metadata)
+        public ActionResult Post([FromBody]Pod pod)
         {
-            string json = metadata.ToString();
-            _logger.LogDebug("Incoming Cluster Update", json);
-
-            Pod pod = new Pod();
-            pod.Container = metadata.spec.containers[0].name;
-            pod.ContainerImage = metadata.spec.containers[0].image;
-            pod.CreationTimestamp = DateTime.Parse(metadata.creationTimestamp);
-            pod.Name = metadata.name;
-            pod.NameSpace = metadata.Namespace;
-            pod.Status = metadata.status.phase;
+            _logger.LogDebug("Incoming Cluster Update", pod);
+            _hub.updateClusterView(pod);
 
             return new OkResult();
         }

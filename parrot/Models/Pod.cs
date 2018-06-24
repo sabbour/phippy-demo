@@ -9,7 +9,6 @@ namespace parrot.Models
         public string NameSpace { get; set; }
         public string ContainerImage { get; set; }
         public string Status { get; set; }
-        public DateTime CreationTimestamp { get; set; }
-        
+        public string Action { get; set; }
     }
 }

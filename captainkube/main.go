@@ -160,6 +160,6 @@ func main() {
 	defer close(stop)
 	go controller.Run(stop)
 	for {
-		time.Sleep(time.Second * 3)
+		time.Sleep(time.Second * 5)
 	}
 }

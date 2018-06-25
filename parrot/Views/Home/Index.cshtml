@@ -11,28 +11,23 @@
 <ul id="pods">
 </ul>
 
-<div class="ui link cards" id="podcards">
-</div>
-
-<div style="display:none;" id="podCardTemplate">
+<div class="ui link cards" id="podcards" data-bind="foreach: pods">
   <div class="ui card">
     <div class="image">
-      <img src="/media/{{container}}.png">
+      <img src="/media/captainkube.png">
     </div>
     <div class="content">
-      <a class="header">{{container}}</a>
+      <a class="header"><span data-bind="text: container"></span></a>
       <div class="meta">
-        <span class="date">Pod: {{name}}</span>
-        <span class="date">Namespace: {{nameSpace}}</span>
-      </div>
-      <div class="description">
-        <b>Container Image</b>: {{containerImage}}
+        <span class="date">Pod: <span data-bind="text: name"></span></span><br/>
+        <span class="date">Namespace: <span data-bind="text: nameSpace"></span></span><br/>
+        <span class="date">Image: <span data-bind="text: containerImage"></span></span>
       </div>
     </div>
     <div class="extra content">
       <a>
         <i class="user icon"></i>
-        <b>Container Image</b>: {{containerImage}}
+        Status: <span data-bind="text: status"></span>
       </a>
     </div>
   </div>
@@ -40,7 +35,7 @@
 
 @section scripts
 {
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+  <script src="~/scripts/knockout-3.4.2.js"></script>
   <script src="~/scripts/signalr.min.js"></script>
   <script src="~/scripts/daemon.js"></script>
   <script src="~/scripts/prototypes.js"></script>

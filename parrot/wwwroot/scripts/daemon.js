@@ -4,7 +4,10 @@ const connection = new signalR.HubConnectionBuilder()
     })
     .build();
 
-connection.onclose(() => console.log('closed'));
+connection.onclose(() => {
+    console.log('closed');
+    startConnection();
+});
 
 var viewModel = new PodCardsViewModel();
 
@@ -22,10 +25,14 @@ function PodCardsViewModel() {
     self.clear = function() { self.pods.removeAll() }
 }
 
-connection
-    .start()
-    .then(() => {
-        console.log('connection started');
-        ko.applyBindings(viewModel);
-    })
-    .catch(console.error);
+function startConnection() {
+    connection
+        .start()
+        .then(() => {
+            console.log('connection started');
+            ko.applyBindings(viewModel);
+        })
+        .catch(console.error);
+}
+
+startConnection();

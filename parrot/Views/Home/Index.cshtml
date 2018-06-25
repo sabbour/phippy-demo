@@ -14,7 +14,7 @@
 <div class="ui link cards" id="podcards" data-bind="foreach: pods">
   <div class="ui card">
     <div class="image">
-      <img src="/media/captainkube.png">
+      <img data-bind="attr:{src: cardImageUrl}" style="max-height: 300px; overflow:hidden;"/>  
     </div>
     <div class="content">
       <a class="header"><span data-bind="text: container"></span></a>

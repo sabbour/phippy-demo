@@ -10,5 +10,9 @@ namespace parrot.Models
         public string ContainerImage { get; set; }
         public string Status { get; set; }
         public string Action { get; set; }
+        public string CardImageUrl
+        {
+            get { return string.Format("/media/{0}.png", Container); }
+        }
     }
 }

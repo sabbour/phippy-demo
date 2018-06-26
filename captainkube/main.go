@@ -46,8 +46,8 @@ func main() {
 	)
 	_, controller := cache.NewInformer(
 		watchlist,
-		&v1.Pod{}, // Kubernetes object to watch
-		time.Second * 10,         // resync period if non-zero, will re-list this often (you will get OnUpdate
+		&v1.Pod{},      // Kubernetes object to watch
+		time.Second*10, // resync period if non-zero, will re-list this often (you will get OnUpdate
 		// calls, even if nothing changed). Otherwise, re-list will be delayed as
 		// long as possible (until the upstream source closes the watch or times out,
 		// or you stop the controller).
@@ -71,7 +71,7 @@ func main() {
 
 					jsonValue, _ := json.Marshal(p)
 
-					response, err := http.Post("http://parrot/api/ClusterStatus", "application/json", bytes.NewBuffer(jsonValue))
+					response, err := http.Post("http://parrot-parrot/api/ClusterStatus", "application/json", bytes.NewBuffer(jsonValue))
 					if err != nil {
 						fmt.Printf("The HTTP request failed with error %s\n", err)
 					} else {
@@ -112,7 +112,7 @@ func main() {
 
 					jsonValue, _ := json.Marshal(p)
 
-					response, err := http.Post("http://parrot/api/ClusterStatus", "application/json", bytes.NewBuffer(jsonValue))
+					response, err := http.Post("http://parrot-parrot/api/ClusterStatus", "application/json", bytes.NewBuffer(jsonValue))
 					if err != nil {
 						fmt.Printf("The HTTP request failed with error %s\n", err)
 					} else {
@@ -144,7 +144,7 @@ func main() {
 
 					jsonValue, _ := json.Marshal(p)
 
-					response, err := http.Post("http://parrot/api/ClusterStatus", "application/json", bytes.NewBuffer(jsonValue))
+					response, err := http.Post("http://parrot-parrot/api/ClusterStatus", "application/json", bytes.NewBuffer(jsonValue))
 					if err != nil {
 						fmt.Printf("The HTTP request failed with error %s\n", err)
 					} else {

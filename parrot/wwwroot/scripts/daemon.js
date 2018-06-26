@@ -30,7 +30,7 @@ function startConnection() {
         .start()
         .then(() => {
             console.log('connection started');
-            ko.applyBindings(viewModel);
+            try { ko.applyBindings(viewModel); } catch { }
         })
         .catch(console.error);
 }

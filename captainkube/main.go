@@ -47,7 +47,7 @@ func main() {
 	_, controller := cache.NewInformer(
 		watchlist,
 		&v1.Pod{}, // Kubernetes object to watch
-		0,         // resync period if non-zero, will re-list this often (you will get OnUpdate
+		time.Second * 10,         // resync period if non-zero, will re-list this often (you will get OnUpdate
 		// calls, even if nothing changed). Otherwise, re-list will be delayed as
 		// long as possible (until the upstream source closes the watch or times out,
 		// or you stop the controller).

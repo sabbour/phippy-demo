@@ -71,7 +71,7 @@ func main() {
 
 					jsonValue, _ := json.Marshal(p)
 
-					response, err := http.Post("http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus", "application/json", bytes.NewBuffer(jsonValue))
+					response, err := http.Post("http://parrot/api/ClusterStatus", "application/json", bytes.NewBuffer(jsonValue))
 					if err != nil {
 						fmt.Printf("The HTTP request failed with error %s\n", err)
 					} else {
@@ -112,7 +112,7 @@ func main() {
 
 					jsonValue, _ := json.Marshal(p)
 
-					response, err := http.Post("http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus", "application/json", bytes.NewBuffer(jsonValue))
+					response, err := http.Post("http://parrot/api/ClusterStatus", "application/json", bytes.NewBuffer(jsonValue))
 					if err != nil {
 						fmt.Printf("The HTTP request failed with error %s\n", err)
 					} else {
@@ -144,7 +144,7 @@ func main() {
 
 					jsonValue, _ := json.Marshal(p)
 
-					response, err := http.Post("http://parrot.cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io/api/ClusterStatus", "application/json", bytes.NewBuffer(jsonValue))
+					response, err := http.Post("http://parrot/api/ClusterStatus", "application/json", bytes.NewBuffer(jsonValue))
 					if err != nil {
 						fmt.Printf("The HTTP request failed with error %s\n", err)
 					} else {

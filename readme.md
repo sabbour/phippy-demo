@@ -21,13 +21,13 @@ to get started, do this:
 ```bash
 git clone https://github.com/bradygmsft/phippy-demo.git
 cd phippy-demo
+cd captainkube
+draft up
+cd ..
 cd parrot
 draft up
 cd ..
 cd nodeapp
-draft up
-cd ..
-cd goapp
 draft up
 cd ..
 ```

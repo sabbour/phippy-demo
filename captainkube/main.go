@@ -47,7 +47,7 @@ func main() {
 	_, controller := cache.NewInformer(
 		watchlist,
 		&v1.Pod{},      // Kubernetes object to watch
-		time.Second*10, // resync period if non-zero, will re-list this often (you will get OnUpdate
+		time.Second*1, // resync period if non-zero, will re-list this often (you will get OnUpdate
 		// calls, even if nothing changed). Otherwise, re-list will be delayed as
 		// long as possible (until the upstream source closes the watch or times out,
 		// or you stop the controller).
@@ -70,6 +70,7 @@ func main() {
 					p := Pod{Action: "Added", Container: pod.Spec.Containers[0].Name, ContainerImage: pod.Spec.Containers[0].Image, Name: pod.ObjectMeta.Name, Namespace: pod.ObjectMeta.Namespace, Status: string(pod.Status.Phase)}
 
 					jsonValue, _ := json.Marshal(p)
+					fmt.Printf("%s",jsonValue)
 
 					response, err := http.Post("http://parrot-parrot/api/ClusterStatus", "application/json", bytes.NewBuffer(jsonValue))
 					if err != nil {
@@ -77,6 +78,7 @@ func main() {
 					} else {
 						data, _ := ioutil.ReadAll(response.Body)
 						fmt.Println(string(data))
+						fmt.Printf("Notified parrot")
 					}
 				}
 			},
@@ -88,12 +90,6 @@ func main() {
 			// get called even if nothing changed. This is useful for periodically
 			// evaluating or syncing something.
 			UpdateFunc: func(oldObj, newObj interface{}) {
-				// cast the object as a pod
-				//oldPod, ok := oldObj.(*v1.Pod)
-				//if !ok {
-				//	fmt.Printf("couldn't cast object as pod: %s \n", oldObj)
-				//	return
-				//}
 				// cast the object as a pod
 				pod, ok := newObj.(*v1.Pod)
 				if !ok {
@@ -111,6 +107,7 @@ func main() {
 					p := Pod{Action: "Updated", Container: pod.Spec.Containers[0].Name, ContainerImage: pod.Spec.Containers[0].Image, Name: pod.ObjectMeta.Name, Namespace: pod.ObjectMeta.Namespace, Status: string(pod.Status.Phase)}
 
 					jsonValue, _ := json.Marshal(p)
+					fmt.Printf("%s",jsonValue)
 
 					response, err := http.Post("http://parrot-parrot/api/ClusterStatus", "application/json", bytes.NewBuffer(jsonValue))
 					if err != nil {
@@ -118,6 +115,7 @@ func main() {
 					} else {
 						data, _ := ioutil.ReadAll(response.Body)
 						fmt.Println(string(data))
+						fmt.Printf("Notified parrot")
 					}
 				}
 			},
@@ -143,13 +141,15 @@ func main() {
 					p := Pod{Action: "Deleted", Container: pod.Spec.Containers[0].Name, ContainerImage: pod.Spec.Containers[0].Image, Name: pod.ObjectMeta.Name, Namespace: pod.ObjectMeta.Namespace, Status: string(pod.Status.Phase)}
 
 					jsonValue, _ := json.Marshal(p)
+					fmt.Printf("%s",jsonValue)
 
 					response, err := http.Post("http://parrot-parrot/api/ClusterStatus", "application/json", bytes.NewBuffer(jsonValue))
 					if err != nil {
 						fmt.Printf("The HTTP request failed with error %s\n", err)
 					} else {
-						data, _ := ioutil.ReadAll(response.Body)
+						data, _ := ioutil.ReadAll(response.Body)	
 						fmt.Println(string(data))
+						fmt.Printf("Notified parrot")
 					}
 				}
 			},
@@ -160,6 +160,8 @@ func main() {
 	defer close(stop)
 	go controller.Run(stop)
 	for {
+		fmt.Printf("Sleeping..")
 		time.Sleep(time.Second * 5)
+		fmt.Printf("Woke up to check events..")
 	}
 }

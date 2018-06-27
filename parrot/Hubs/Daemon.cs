@@ -49,7 +49,10 @@ namespace parrot
 
         public void updateClusterView(Pod pod)
         {
-            pod.ContainerImage = pod.ContainerImage.Substring(0, pod.ContainerImage.IndexOf(':'));
+            // If the container image is "image:tag", strip the ":tag", otherwise leave it alone
+            // not all images are tagged, so..
+            if(pod.ContainerImage.Contains(':'))
+                pod.ContainerImage = pod.ContainerImage.Substring(0, pod.ContainerImage.IndexOf(':'));
 
             if (Pods.Any(x => x.Container == pod.Container))
                 if (pod.Action == POD_DELETED_STATUS)

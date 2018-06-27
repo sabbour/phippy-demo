@@ -14,5 +14,9 @@ namespace parrot.Models
         {
             get { return string.Format("/media/{0}.png", Container); }
         }
+
+        public string ToString() {
+            return $"Name: {Name}\nContainer: {Container}\nNameSpace: {NameSpace}\nContainerImage: {ContainerImage}\nStatus: {Status}\nAction: {Action}\nCardImageUrl: {CardImageUrl}";
+        }
     }
 }

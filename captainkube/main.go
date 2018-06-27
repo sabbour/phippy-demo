@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"encoding/json"
 	"net/http"
-	"time"
 	"log"
 	"reflect"
 
@@ -41,6 +40,16 @@ func main() {
 	client, err := kubernetes.NewForConfig(config)
 	if err != nil {
 		panic(err.Error())
+	}
+
+	// Clear the cluster status, start with a blank slate
+	req, err := http.NewRequest(http.MethodDelete, "http://parrot-parrot/api/ClusterStatus", bytes.NewBuffer([]byte(``)))
+	httpclient := &http.Client{}
+    _, err = httpclient.Do(req)
+	if err != nil {
+		log.Printf("The HTTP request failed with error %s", err)
+	} else {
+		log.Printf("Cleared parrot")
 	}
 
 	// Setup the informer that will start watching for pod triggers
@@ -99,6 +108,13 @@ func pingparrot(pod *v1.Pod, state string) {
 		log.Printf("Pod %s: %s", state, pod.ObjectMeta.Name)
 		log.Printf("namespace: %s", pod.ObjectMeta.Namespace)
 		log.Printf("status: %s", pod.Status.Phase)
+		log.Printf("startTime: %s", pod.Status.StartTime)
+		log.Printf("conditions:")
+
+		for _, condition := range pod.Status.Conditions {
+			log.Printf("\ttype: %s", condition.Type)
+			log.Printf("\tlastTransitionTime: %s", condition.LastTransitionTime)
+		}
 
 		// shrink the object we send over
 		p := Pod{Action: state, Container: pod.Spec.Containers[0].Name, ContainerImage: pod.Spec.Containers[0].Image, Name: pod.ObjectMeta.Name, Namespace: pod.ObjectMeta.Namespace, Status: string(pod.Status.Phase)}

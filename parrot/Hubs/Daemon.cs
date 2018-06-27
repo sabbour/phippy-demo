@@ -48,6 +48,12 @@ namespace parrot
             Pods.First(x => x.Name == pod.Name).Status = pod.Status;
         }
 
+        public void clearClusterView()
+        {
+            Pods.Clear();
+            Clients.All.SendAsync("clusterViewUpdated", Pods);
+        }
+
         public void updateClusterView(Pod pod)
         {
             // If the container image is "image:tag", strip the ":tag", otherwise leave it alone

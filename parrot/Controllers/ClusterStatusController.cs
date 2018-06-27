@@ -31,6 +31,21 @@ namespace api.Controllers
             return new OkResult();
         }
 
+        [HttpDelete]
+        public ActionResult Delete()
+        {
+            _logger.LogDebug("Incoming Cluster Clear");
+            try {
+                _hub.clearClusterView();
+            }
+            catch(Exception ex) {
+                HttpContext.Response.StatusCode = (int)System.Net.HttpStatusCode.InternalServerError; 
+                _logger.LogWarning(ex, "Error clearing cluster view");
+                return Json(new { status="error",message=$"error updating cluster view {ex.Message}"});
+            }
+            return new OkResult();
+        }
+
         [HttpPost]
         public ActionResult Post([FromBody]Pod pod)
         {

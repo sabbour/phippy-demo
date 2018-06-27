@@ -1,0 +1,9 @@
+replicaCount: 1
+image:
+  pullPolicy: Always
+service:
+  internalPort: 80
+  externalPort: 80
+ingress:
+  enabled: true
+  basedomain:  9e626ede-8145-4169-a5ab-05500238a78f.westeurope.aksapp.io # replace with your own from the portal

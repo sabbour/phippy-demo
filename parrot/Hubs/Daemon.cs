@@ -63,13 +63,7 @@ namespace parrot
             else
                 AddPod(pod);
 
-            try {
                 Clients.All.SendAsync("clusterViewUpdated", Pods);
-            }
-            catch {
-                // try again..sometimes this throws System.NullReferenceException: Object reference not set to an instance of an object.
-                Clients.All.SendAsync("clusterViewUpdated", Pods);
-            }
         }
     }
 }

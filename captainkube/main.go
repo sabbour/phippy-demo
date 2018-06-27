@@ -63,7 +63,7 @@ func main() {
 		WatchFunc: func(options metav1.ListOptions) (watch.Interface, error) {
 		  return client.CoreV1().Pods(v1.NamespaceAll).Watch(options)
 		},
-	  }, &v1.Pod{}, 5, cache.Indexers{}) // We only want `Pod`
+	  }, &v1.Pod{}, 10, cache.Indexers{}) // We only want `Pod`
 	
 	  // Setup the trigger handlers that will receive triggers
 	  informer.AddEventHandler(cache.ResourceEventHandlerFuncs{

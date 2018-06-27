@@ -36,15 +36,16 @@ namespace parrot
 
         public void RemovePod(Pod pod)
         {
-            Pods.Remove(Pods.First(x => x.Container == pod.Container));
+            Pods.Remove(Pods.First(x => x.Name == pod.Name));
             DeletedPods.Add(pod.Name);
         }
 
         public void UpdatePod(Pod pod)
         {
-            Pods.First(x => x.Container == pod.Container).Name = pod.Name;
-            Pods.First(x => x.Container == pod.Container).NameSpace = pod.NameSpace;
-            Pods.First(x => x.Container == pod.Container).Status = pod.Status;
+            Pods.First(x => x.Name == pod.Name).Name = pod.Name;
+            Pods.First(x => x.Name == pod.Name).Container = pod.Container;
+            Pods.First(x => x.Name == pod.Name).NameSpace = pod.NameSpace;
+            Pods.First(x => x.Name == pod.Name).Status = pod.Status;
         }
 
         public void updateClusterView(Pod pod)
@@ -54,7 +55,7 @@ namespace parrot
             if(pod.ContainerImage.Contains(':'))
                 pod.ContainerImage = pod.ContainerImage.Substring(0, pod.ContainerImage.IndexOf(':'));
 
-            if (Pods.Any(x => x.Container == pod.Container))
+            if (Pods.Any(x => x.Name == pod.Name))
                 if (pod.Action == POD_DELETED_STATUS)
                     RemovePod(pod);
                 else
@@ -62,7 +63,13 @@ namespace parrot
             else
                 AddPod(pod);
 
-            Clients.All.SendAsync("clusterViewUpdated", Pods);
+            try {
+                Clients.All.SendAsync("clusterViewUpdated", Pods);
+            }
+            catch {
+                // try again..sometimes this throws System.NullReferenceException: Object reference not set to an instance of an object.
+                Clients.All.SendAsync("clusterViewUpdated", Pods);
+            }
         }
     }
 }

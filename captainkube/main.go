@@ -3,13 +3,14 @@ package main
 import (
 	"bytes"
 	"encoding/json"
-	"fmt"
-	"io/ioutil"
 	"net/http"
-	"time"
+	"log"
+	"reflect"
 
 	"k8s.io/api/core/v1"
-	"k8s.io/apimachinery/pkg/fields"
+	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	"k8s.io/apimachinery/pkg/runtime"
+	"k8s.io/apimachinery/pkg/watch"
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/rest"
 	"k8s.io/client-go/tools/cache"
@@ -25,141 +26,108 @@ type Pod struct {
 }
 
 func main() {
+	// stop will be used by the informer to allow a clean shutdown
+	// If the channel is closed, it communicates the informer that it needs to shutdown
+	stop := make(chan struct{})
+
 	// creates the in-cluster config
 	config, err := rest.InClusterConfig()
 	if err != nil {
 		panic(err.Error())
 	}
 
-	// creates the clientset
-	clientset, err := kubernetes.NewForConfig(config)
+	// creates the client
+	client, err := kubernetes.NewForConfig(config)
 	if err != nil {
 		panic(err.Error())
 	}
 
-	// start watching
-	watchlist := cache.NewListWatchFromClient(
-		clientset.CoreV1().RESTClient(),
-		string(v1.ResourcePods), // Kubernetes object to watch
-		v1.NamespaceAll,         // namespace to watch
-		fields.Everything(),     // fields
-	)
-	_, controller := cache.NewInformer(
-		watchlist,
-		&v1.Pod{},      // Kubernetes object to watch
-		time.Second*10, // resync period if non-zero, will re-list this often (you will get OnUpdate
-		// calls, even if nothing changed). Otherwise, re-list will be delayed as
-		// long as possible (until the upstream source closes the watch or times out,
-		// or you stop the controller).
-		cache.ResourceEventHandlerFuncs{
-			// called when an object is added
-			AddFunc: func(obj interface{}) {
-				// cast the object as a pod
-				pod, ok := obj.(*v1.Pod)
-				if !ok {
-					fmt.Printf("couldn't cast object as pod: %s \n", obj)
-					return
-				}
-				if pod.ObjectMeta.Namespace != "kube-system" {
-					fmt.Printf("pod added: %s \n", pod.ObjectMeta.Name)
-					fmt.Printf("\tnamespace: %s \n", pod.ObjectMeta.Namespace)
-					fmt.Printf("\tlabels: %s \n", pod.ObjectMeta.Labels)
-					fmt.Printf("\tstatus: %s \n", pod.Status.Phase)
+	// Clear the cluster status, start with a blank slate
+	req, err := http.NewRequest(http.MethodDelete, "http://parrot-parrot/api/ClusterStatus", bytes.NewBuffer([]byte(``)))
+	httpclient := &http.Client{}
+    _, err = httpclient.Do(req)
+	if err != nil {
+		log.Printf("The HTTP request failed with error %s", err)
+	} else {
+		log.Printf("\n\n**** Cleared parrot****\n\n")
+	}
 
-					// shrink the object we send over
-					p := Pod{Action: "Added", Container: pod.Spec.Containers[0].Name, ContainerImage: pod.Spec.Containers[0].Image, Name: pod.ObjectMeta.Name, Namespace: pod.ObjectMeta.Namespace, Status: string(pod.Status.Phase)}
-
-					jsonValue, _ := json.Marshal(p)
-
-					response, err := http.Post("http://parrot-parrot/api/ClusterStatus", "application/json", bytes.NewBuffer(jsonValue))
-					if err != nil {
-						fmt.Printf("The HTTP request failed with error %s\n", err)
-					} else {
-						data, _ := ioutil.ReadAll(response.Body)
-						fmt.Println(string(data))
-					}
-				}
-			},
-
-			// called when an object is modified. Note that oldObj is the
-			// last known state of the object-- it is possible that several changes
-			// were combined together, so you can't use this to see every single
-			// change. OnUpdate is also called when a re-list happens, and it will
-			// get called even if nothing changed. This is useful for periodically
-			// evaluating or syncing something.
-			UpdateFunc: func(oldObj, newObj interface{}) {
-				// cast the object as a pod
-				//oldPod, ok := oldObj.(*v1.Pod)
-				//if !ok {
-				//	fmt.Printf("couldn't cast object as pod: %s \n", oldObj)
-				//	return
-				//}
-				// cast the object as a pod
-				pod, ok := newObj.(*v1.Pod)
-				if !ok {
-					fmt.Printf("couldn't cast object as pod: %s \n", newObj)
-					return
-				}
-
-				if pod.ObjectMeta.Namespace != "kube-system" {
-					fmt.Printf("pod changed: %s \n", pod.ObjectMeta.Name)
-					fmt.Printf("\tnamespace: %s \n", pod.ObjectMeta.Namespace)
-					fmt.Printf("\tlabels: %s \n", pod.ObjectMeta.Labels)
-					fmt.Printf("\tstatus: %s \n", pod.Status.Phase)
-
-					// shrink the object we send over
-					p := Pod{Action: "Updated", Container: pod.Spec.Containers[0].Name, ContainerImage: pod.Spec.Containers[0].Image, Name: pod.ObjectMeta.Name, Namespace: pod.ObjectMeta.Namespace, Status: string(pod.Status.Phase)}
-
-					jsonValue, _ := json.Marshal(p)
-
-					response, err := http.Post("http://parrot-parrot/api/ClusterStatus", "application/json", bytes.NewBuffer(jsonValue))
-					if err != nil {
-						fmt.Printf("The HTTP request failed with error %s\n", err)
-					} else {
-						data, _ := ioutil.ReadAll(response.Body)
-						fmt.Println(string(data))
-					}
-				}
-			},
-			// will get the final state of the item if it is known, otherwise
-			// it will get an object of type DeletedFinalStateUnknown. This can
-			// happen if the watch is closed and misses the delete event and we don't
-			// notice the deletion until the subsequent re-list.
-			DeleteFunc: func(obj interface{}) {
-				// cast the object as a pod
-				pod, ok := obj.(*v1.Pod)
-				if !ok {
-					fmt.Printf("couldn't cast object as pod: %s \n", obj)
-					return
-				}
-
-				if pod.ObjectMeta.Namespace != "kube-system" {
-					fmt.Printf("pod deleted: %s \n", pod.ObjectMeta.Name)
-					fmt.Printf("\tnamespace: %s \n", pod.ObjectMeta.Namespace)
-					fmt.Printf("\tlabels: %s \n", pod.ObjectMeta.Labels)
-					fmt.Printf("\tstatus: %s \n", pod.Status.Phase)
-
-					// shrink the object we send over
-					p := Pod{Action: "Deleted", Container: pod.Spec.Containers[0].Name, ContainerImage: pod.Spec.Containers[0].Image, Name: pod.ObjectMeta.Name, Namespace: pod.ObjectMeta.Namespace, Status: string(pod.Status.Phase)}
-
-					jsonValue, _ := json.Marshal(p)
-
-					response, err := http.Post("http://parrot-parrot/api/ClusterStatus", "application/json", bytes.NewBuffer(jsonValue))
-					if err != nil {
-						fmt.Printf("The HTTP request failed with error %s\n", err)
-					} else {
-						data, _ := ioutil.ReadAll(response.Body)
-						fmt.Println(string(data))
-					}
-				}
-			},
+	// Setup the informer that will start watching for pod triggers
+	informer := cache.NewSharedIndexInformer(&cache.ListWatch{
+		// This method will be used by the informer to retrieve the existing list of objects
+		// It is used during initialization to get the current state of things
+		ListFunc: func(options metav1.ListOptions) (runtime.Object, error) {
+		  return client.CoreV1().Pods(v1.NamespaceAll).List(options)
 		},
-	)
+		// This method is used to watch on the triggers we wish to receive
+		WatchFunc: func(options metav1.ListOptions) (watch.Interface, error) {
+		  return client.CoreV1().Pods(v1.NamespaceAll).Watch(options)
+		},
+	  }, &v1.Pod{}, 10, cache.Indexers{}) // We only want `Pod`
+	
+	  // Setup the trigger handlers that will receive triggers
+	  informer.AddEventHandler(cache.ResourceEventHandlerFuncs{
+		// This method is executed when a new pod is created
+		AddFunc: func(obj interface{}) {
+			pod, ok := obj.(*v1.Pod) // cast the object as a pod
+			if !ok {
+				//log.Printf("Couldn't cast object as pod: %s", obj)
+				return
+			}
+			pingparrot(pod,"Added") // Ping the parrot
+		},
+		// This method is executed when an existing pod is updated
+		UpdateFunc: func(oldObj, newObj interface{}) {
+			newPod, ok := newObj.(*v1.Pod) // cast the object as a pod
+			if !ok {
+				//log.Printf("Couldn't cast object as pod: %s", newObj)
+				return
+			}
+			// Deep compare objects and only notify if they are truly different
+			if !reflect.DeepEqual(oldObj, newObj) {
+				pingparrot(newPod,"Updated") // Ping the parrot
+			}
+		},
+		// This method is executed when an existing pod is deleted
+		DeleteFunc: func(obj interface{}) {
+			pod, ok := obj.(*v1.Pod) // cast the object as a pod
+			if !ok {
+				//log.Printf("Couldn't cast object as pod: %s", obj)
+				return
+			}
+			pingparrot(pod,"Deleted") // Ping the parrot
+		},
+	  })
+	
+	  // Start the informer, until `stop` is closed
+	  informer.Run(stop)
+}
 
-	stop := make(chan struct{})
-	defer close(stop)
-	go controller.Run(stop)
-	for {
-		time.Sleep(time.Second * 5)
+func pingparrot(pod *v1.Pod, state string) {
+	if pod.ObjectMeta.Namespace != "kube-system" {
+		log.Printf("Pod %s: %s", state, pod.ObjectMeta.Name)
+		log.Printf("namespace: %s", pod.ObjectMeta.Namespace)
+		log.Printf("status: %s", pod.Status.Phase)
+		log.Printf("startTime: %s", pod.Status.StartTime)
+		log.Printf("conditions:")
+
+		for _, condition := range pod.Status.Conditions {
+			log.Printf("\ttype: %s", condition.Type)
+			log.Printf("\tlastTransitionTime: %s", condition.LastTransitionTime)
+		}
+
+		// shrink the object we send over
+		p := Pod{Action: state, Container: pod.Spec.Containers[0].Name, ContainerImage: pod.Spec.Containers[0].Image, Name: pod.ObjectMeta.Name, Namespace: pod.ObjectMeta.Namespace, Status: string(pod.Status.Phase)}
+
+		jsonValue, _ := json.Marshal(p)
+		//log.Printf("\n%s\n",jsonValue)
+
+		_, err := http.Post("http://parrot-parrot/api/ClusterStatus", "application/json", bytes.NewBuffer(jsonValue))
+		if err != nil {
+			log.Printf("The HTTP request failed with error %s", err)
+		} else {
+			log.Printf("Notified parrot: %s", state)
+		}
+		log.Printf("\n\n")
 	}
 }

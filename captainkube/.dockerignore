@@ -3,3 +3,4 @@ draft.toml
 chart/
 NOTICE
 Godeps/
+vendor/

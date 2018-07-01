@@ -1,6 +1,7 @@
 package main
 
 import (
+	"time"
 	"bytes"
 	"encoding/json"
 	"net/http"
@@ -8,9 +9,7 @@ import (
 	"reflect"
 
 	"k8s.io/api/core/v1"
-	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	"k8s.io/apimachinery/pkg/runtime"
-	"k8s.io/apimachinery/pkg/watch"
+	"k8s.io/apimachinery/pkg/fields"
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/rest"
 	"k8s.io/client-go/tools/cache"
@@ -26,6 +25,8 @@ type Pod struct {
 }
 
 func main() {
+	log.Println("Starting up Captain Kube")
+
 	// stop will be used by the informer to allow a clean shutdown
 	// If the channel is closed, it communicates the informer that it needs to shutdown
 	stop := make(chan struct{})
@@ -43,6 +44,7 @@ func main() {
 	}
 
 	// Clear the cluster status, start with a blank slate
+	/*
 	req, err := http.NewRequest(http.MethodDelete, "http://parrot-parrot/api/ClusterStatus", bytes.NewBuffer([]byte(``)))
 	httpclient := &http.Client{}
     _, err = httpclient.Do(req)
@@ -51,19 +53,17 @@ func main() {
 	} else {
 		log.Printf("\n\n**** Cleared parrot****\n\n")
 	}
+	*/
+
+	watchList := cache.NewListWatchFromClient(client.Core().RESTClient(), "pods", v1.NamespaceAll, fields.Everything())
 
 	// Setup the informer that will start watching for pod triggers
-	informer := cache.NewSharedIndexInformer(&cache.ListWatch{
-		// This method will be used by the informer to retrieve the existing list of objects
-		// It is used during initialization to get the current state of things
-		ListFunc: func(options metav1.ListOptions) (runtime.Object, error) {
-		  return client.CoreV1().Pods(v1.NamespaceAll).List(options)
-		},
-		// This method is used to watch on the triggers we wish to receive
-		WatchFunc: func(options metav1.ListOptions) (watch.Interface, error) {
-		  return client.CoreV1().Pods(v1.NamespaceAll).Watch(options)
-		},
-	  }, &v1.Pod{}, 10, cache.Indexers{}) // We only want `Pod`
+	informer := cache.NewSharedIndexInformer(
+		watchList,
+		&v1.Pod{},
+		10*time.Second,
+		cache.Indexers{},
+	) // We only want `Pod`, force resync every 10 seconds
 	
 	  // Setup the trigger handlers that will receive triggers
 	  informer.AddEventHandler(cache.ResourceEventHandlerFuncs{

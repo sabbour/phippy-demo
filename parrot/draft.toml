@@ -1,7 +1,7 @@
 [environments]
   [environments.development]
     name = "parrot"
-    namespace = "default"
+    namespace = "phippy"
     wait = true
     watch = false
     watch-delay = 2

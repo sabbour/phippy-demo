@@ -6,4 +6,4 @@ service:
   externalPort: 80
 ingress:
   enabled: true
-  basedomain:  9e626ede-8145-4169-a5ab-05500238a78f.westeurope.aksapp.io # replace with your own from the portal
+  basedomain:  02801450f7494010a089.northeurope.aksapp.io # replace with your own from the portal

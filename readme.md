@@ -37,10 +37,10 @@ cd ..
 test your deployment by running this:
 
 ```bash
-kubectl get svc
+kubectl get svc --namespace phippy
 ```
 
-you should see something like this, if you had a clean cluster prior to the deployment.
+you should see something like this
 
 ```sh
 NAME                  TYPE           CLUSTER-IP     EXTERNAL-IP     PORT(S)     AGE
@@ -62,7 +62,7 @@ find the `httpApplicationRouting` segment of the JSON payload and copy the `HTTP
 ```json
 "httpApplicationRouting": {
   "config": {
-    "HTTPApplicationRoutingZoneName": "cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io"
+    "HTTPApplicationRoutingZoneName": "05500238a78f.westeurope.aksapp.io"
   },
   "enabled": true
 }
@@ -72,19 +72,19 @@ paste in the DNS to `parrot\charts\values.yaml` so that it looks like this, repl
 
 ```yaml
 ingress:
-  enabled: true
-  basedomain: cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io
+  enabled: true  # make sure it is enabled
+  basedomain: 05500238a78f.westeurope.aksapp.io # replace this
 ```
 
 paste in the DNS to `nodeapp\charts\values.yaml` so that it looks like this, replacing the example value with your own:
 
 ```yaml
 ingress:
-  enabled: true
-  basedomain: cc52d3f9-e6e0-4e9d-82fe-882ad68bf09a.westus.aksapp.io
+  enabled: true # make sure it is enabled
+  basedomain: 05500238a78f.westeurope.aksapp.io # replace this
 ```
 
-once you do this, the dotnet app should respond on `parrot.<your clusters specific dns zone>`, and the Node.js app on `nodeapp.<your clusters specific dns zone>`. for example: `parrot.9e626ede-8145-4169-a5ab-05500238a78f.westeurope.aksapp.io`
+once you do this, the dotnet app should respond on `parrot.<your clusters specific dns zone>`, and the Node.js app on `nodeapp.<your clusters specific dns zone>`. for example: `parrot.05500238a78f.westeurope.aksapp.io`
 
 to deploy the changes, run these commands:
 
@@ -99,15 +99,15 @@ draft up
 test your deployment by running this:
 
 ```bash
-kubectl get ingress
+kubectl get ingress --namespace phippy
 ```
 
-you should see something like this, if you had a clean cluster prior to the deployment.
+you should see something like this
 
 ```sh
 NAME                  HOSTS                                                                 ADDRESS          PORTS     AGE
-parrot-parrot         parrot.9e626ede-8145-4169-a5ab-05500238a78f.westeurope.aksapp.io   52.136.252.253   80        1m
-nodeapp-nodeapp       nodeapp.9e626ede-8145-4169-a5ab-05500238a78f.westeurope.aksapp.io     52.136.252.253   80        2m
+parrot-parrot         parrot.05500238a78f.westeurope.aksapp.io   52.136.252.253   80        1m
+nodeapp-nodeapp       nodeapp.05500238a78f.westeurope.aksapp.io     52.136.252.253   80        2m
 ```
 
 ## issues?

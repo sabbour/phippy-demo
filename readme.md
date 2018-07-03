@@ -21,10 +21,10 @@ to get started, do this:
 ```bash
 git clone https://github.com/bradygmsft/phippy-demo.git
 cd phippy-demo
-cd captainkube
+cd parrot
 draft up
 cd ..
-cd parrot
+cd captainkube
 draft up
 cd ..
 cd nodeapp
@@ -49,7 +49,7 @@ kubernetes            ClusterIP      10.0.0.1       <none>          443/TCP     
 nodeapp-nodeapp       ClusterIP      10.0.236.198   <none>          80/TCP      2m
 ```
 
-## allow inbound access 
+## allow inbound access
 
 the cluster has a default inbound DNS address. to get it, execute the `az` CLI command:
 
@@ -110,7 +110,7 @@ parrot-parrot         parrot.9e626ede-8145-4169-a5ab-05500238a78f.westeurope.aks
 nodeapp-nodeapp       nodeapp.9e626ede-8145-4169-a5ab-05500238a78f.westeurope.aksapp.io     52.136.252.253   80        2m
 ```
 
-## issues? 
+## issues?
 
 we all have them. for starters, [this](https://github.com/bradygmsft/phippy-demo/issues/1). if you see issues as you're exploring, create them, then send us a pull request to resolve them. or one or the other. you know...
 

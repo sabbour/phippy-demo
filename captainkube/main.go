@@ -26,11 +26,34 @@ type Pod struct {
 
 func main() {
 	log.Println("Starting up Captain Kube")
+	informerChannel := make(chan struct{})
+	go runinformer(informerChannel)
 
-	// stop will be used by the informer to allow a clean shutdown
-	// If the channel is closed, it communicates the informer that it needs to shutdown
-	stop := make(chan struct{})
+	runhealthz()
+	<-informerChannel
+	log.Println("Captain Kube shutting down")
+}
 
+func runhealthz() {
+	// Start listening for health checks
+	mux := http.NewServeMux()
+	mux.HandleFunc("/healthz", func(w http.ResponseWriter, req *http.Request) {
+		checkReq, err := http.NewRequest(http.MethodGet, "http://parrot-parrot.phippy/", bytes.NewBuffer([]byte(``)))
+		httpclient := &http.Client{}
+		_, err = httpclient.Do(checkReq)
+		if err != nil {
+			log.Println("Parrot is unreachable")
+			w.WriteHeader(http.StatusServiceUnavailable)
+		} else {
+			w.WriteHeader(http.StatusOK)
+		}
+	})
+
+	log.Println("Listening for health checks...")
+	http.ListenAndServe(":3000", mux)
+}
+
+func runinformer(done chan struct{}) {
 	// creates the in-cluster config
 	config, err := rest.InClusterConfig()
 	if err != nil {
@@ -44,8 +67,7 @@ func main() {
 	}
 
 	// Clear the cluster status, start with a blank slate
-	/*
-	req, err := http.NewRequest(http.MethodDelete, "http://parrot-parrot/api/ClusterStatus", bytes.NewBuffer([]byte(``)))
+	req, err := http.NewRequest(http.MethodDelete, "http://parrot-parrot.phippy/api/ClusterStatus", bytes.NewBuffer([]byte(``)))
 	httpclient := &http.Client{}
     _, err = httpclient.Do(req)
 	if err != nil {
@@ -53,7 +75,6 @@ func main() {
 	} else {
 		log.Printf("\n\n**** Cleared parrot****\n\n")
 	}
-	*/
 
 	watchList := cache.NewListWatchFromClient(client.Core().RESTClient(), "pods", v1.NamespaceAll, fields.Everything())
 
@@ -99,8 +120,8 @@ func main() {
 		},
 	  })
 	
-	  // Start the informer, until `stop` is closed
-	  informer.Run(stop)
+	  // Start the informer, until `done` is closed
+	  informer.Run(done)
 }
 
 func pingparrot(pod *v1.Pod, state string) {
@@ -122,7 +143,7 @@ func pingparrot(pod *v1.Pod, state string) {
 		jsonValue, _ := json.Marshal(p)
 		//log.Printf("\n%s\n",jsonValue)
 
-		_, err := http.Post("http://parrot-parrot/api/ClusterStatus", "application/json", bytes.NewBuffer(jsonValue))
+		_, err := http.Post("http://parrot-parrot.phippy/api/ClusterStatus", "application/json", bytes.NewBuffer(jsonValue))
 		if err != nil {
 			log.Printf("The HTTP request failed with error %s", err)
 		} else {

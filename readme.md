@@ -110,6 +110,14 @@ parrot-parrot         parrot.05500238a78f.westeurope.aksapp.io   52.136.252.253 
 nodeapp-nodeapp       nodeapp.05500238a78f.westeurope.aksapp.io     52.136.252.253   80        2m
 ```
 
+scale your nodeapp by running this:
+
+```bash
+kubectl scale deployment/nodeapp-nodeapp --replicas 3 --namespace phippy
+```
+
+and watch more brady ninjas come to life!
+
 ## issues?
 
 we all have them. for starters, [this](https://github.com/bradygmsft/phippy-demo/issues/1). if you see issues as you're exploring, create them, then send us a pull request to resolve them. or one or the other. you know...

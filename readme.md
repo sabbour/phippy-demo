@@ -105,9 +105,9 @@ kubectl get ingress --namespace phippy
 you should see something like this
 
 ```sh
-NAME                  HOSTS                                                                 ADDRESS          PORTS     AGE
-parrot-parrot         parrot.05500238a78f.westeurope.aksapp.io   52.136.252.253   80        1m
-nodeapp-nodeapp       nodeapp.05500238a78f.westeurope.aksapp.io     52.136.252.253   80        2m
+NAME               HOSTS                                      ADDRESS          PORTS     AGE
+parrot-parrot      parrot.05500238a78f.westeurope.aksapp.io   52.136.252.253   80        1m
+nodeapp-nodeapp    nodeapp.05500238a78f.westeurope.aksapp.io  52.136.252.253   80        2m
 ```
 
 give your parrot a visit by heading over to its hostname, for example [http://parrot.05500238a78f.westeurope.aksapp.io](http://parrot.05500238a78f.westeurope.aksapp.io)

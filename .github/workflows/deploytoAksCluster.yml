@@ -1,0 +1,50 @@
+on: [push]
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    
+    - uses: azure/docker-login@v1
+      with:
+        login-server: sabbour.azurecr.io
+        username: ${{ secrets.acr_sabbour_username }}
+        password: ${{ secrets.acr_sabbour_password }}
+    
+    - name: Build and push image to ACR
+      id: build-image
+      run: |
+        docker build "$GITHUB_WORKSPACE/captainkube" -f  "captainkube/Dockerfile" -t sabbour.azurecr.io/akstest:${{ github.sha }} --label dockerfile-path=captainkube/Dockerfile
+        docker push sabbour.azurecr.io/akstest:${{ github.sha }}
+    
+    - uses: azure/k8s-set-context@v1
+      with:
+         kubeconfig: ${{ secrets.aks_akstest_kubeConfig }}
+      id: login
+    
+    - name: Create namespace
+      run: |
+        namespacePresent=`kubectl get namespace | grep aks-test9637 | wc -l`
+        if [ $namespacePresent -eq 0 ]
+        then
+            echo `kubectl create namespace aks-test9637`
+        fi
+
+    - uses: azure/k8s-create-secret@v1
+      with:
+        namespace: aks-test9637
+        container-registry-url: sabbour.azurecr.io
+        container-registry-username: ${{ secrets.acr_sabbour_username }}
+        container-registry-password: ${{ secrets.acr_sabbour_password }}
+        secret-name: akstestdockerauth
+       
+    - uses: azure/k8s-deploy@v1.2
+      with:
+        namespace: aks-test9637
+        manifests: |
+          manifests/deployment.yml
+          manifests/service.yml
+        images: |
+          sabbour.azurecr.io/akstest:${{ github.sha }}
+        imagepullsecrets: |
+          akstestdockerauth
